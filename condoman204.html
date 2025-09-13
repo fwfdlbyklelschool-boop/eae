@@ -1,0 +1,2041 @@
+html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descriptive Title -->
+    <title>CondoConnect Thailand | Your Smart Condo Living</title>
+    <meta name="description" content="Manage your condo life easily with CondoConnect Thailand. Pay bills, book parking, track deliveries, connect with neighbours, and request services all in one place.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- START CSS --- */
+        :root {
+            /* Light Mode Colors */
+            --primary-light: #ff6b6b;
+            --secondary-light: #f06595;
+            --accent-light: #4dabf7;
+            --success-light: #69db7c;
+            --warning-light: #ff922b;
+            --danger-light: #fa5252;
+            --info-light: #74c0fc;
+            --bg-light: #f8f9fa;
+            --card-bg-light: #ffffff;
+            --text-light: #343a40;
+            --text-muted-light: #6c757d;
+            --border-light: #dee2e6;
+            --input-bg-light: #ffffff;
+            --input-disabled-bg-light: #e9ecef;
+            --focus-ring-light: rgba(255, 107, 107, 0.35);
+            --white: #ffffff;
+            --black: #000000;
+
+            /* Dark Mode Colors */
+            --primary-dark: #ff8787;
+            --secondary-dark: #faa2c1;
+            --accent-dark: #74c0fc;
+            --success-dark: #8ce99a;
+            --warning-dark: #ffc078;
+            --danger-dark: #ff8787;
+            --info-dark: #a5d8ff;
+            --bg-dark: #121212;
+            --card-bg-dark: #1e1e1e;
+            --text-dark: #e9ecef;
+            --text-muted-dark: #adb5bd;
+            --border-dark: #495057;
+            --input-bg-dark: #2b2b2b;
+            --input-disabled-bg-dark: #343a40;
+            --focus-ring-dark: rgba(255, 135, 135, 0.4);
+
+            /* Universal Variables */
+            --primary: var(--primary-light);
+            --secondary: var(--secondary-light);
+            --accent: var(--accent-light);
+            --success: var(--success-light);
+            --warning: var(--warning-light);
+            --danger: var(--danger-light);
+            --info: var(--info-light);
+            --bg-color: var(--bg-light);
+            --card-bg-color: var(--card-bg-light);
+            --text-color: var(--text-light);
+            --text-muted-color: var(--text-muted-light);
+            --border-color: var(--border-light);
+            --input-bg-color: var(--input-bg-light);
+            --input-disabled-bg: var(--input-disabled-bg-light);
+            --focus-ring-color: var(--focus-ring-light);
+            --button-text-on-primary: var(--white);
+            --button-text-on-danger: var(--white);
+            --button-text-on-warning: var(--black);
+            --button-text-on-info: var(--black);
+            --button-text-on-success: var(--black);
+            --button-text-on-secondary: var(--white);
+
+            --primary-rgb: 255, 107, 107;
+            --secondary-rgb: 240, 101, 149;
+            --primary-rgb-dark: 255, 135, 135;
+            --secondary-rgb-dark: 250, 162, 193;
+            --primary-rgb-current: var(--primary-rgb);
+            --secondary-rgb-current: var(--secondary-rgb);
+
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.08);
+            --shadow-sm-dark: 0 1px 2px rgba(0, 0, 0, 0.15);
+            --shadow-md-dark: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --shadow-lg-dark: 0 10px 20px rgba(0, 0, 0, 0.25);
+            --shadow-current: var(--shadow-md);
+
+            --border-radius-sm: 0.25rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.8rem;
+            --border-radius-xl: 1.25rem;
+            --border-radius-pill: 50rem;
+            --transition-fast: 0.2s ease;
+            --transition-base: 0.3s ease;
+            --transition-slow: 0.5s ease;
+
+            --focus-outline-width: 3px;
+            --focus-outline-offset: 2px;
+        }
+
+        /* Apply Dark Mode */
+        body.dark-mode {
+            --primary: var(--primary-dark);
+            --secondary: var(--secondary-dark);
+            --accent: var(--accent-dark);
+            --success: var(--success-dark);
+            --warning: var(--warning-dark);
+            --danger: var(--danger-dark);
+            --info: var(--info-dark);
+            --bg-color: var(--bg-dark);
+            --card-bg-color: var(--card-bg-dark);
+            --text-color: var(--text-dark);
+            --text-muted-color: var(--text-muted-dark);
+            --border-color: var(--border-dark);
+            --input-bg-color: var(--input-bg-dark);
+            --input-disabled-bg: var(--input-disabled-bg-dark);
+            --shadow-current: var(--shadow-md-dark);
+            --focus-ring-color: var(--focus-ring-dark);
+            --primary-rgb-current: var(--primary-rgb-dark);
+            --secondary-rgb-current: var(--secondary-rgb-dark);
+            --button-text-on-primary: var(--black);
+            --button-text-on-danger: var(--black);
+            --button-text-on-warning: var(--black);
+            --button-text-on-info: var(--black);
+            --button-text-on-success: var(--black);
+            --button-text-on-secondary: var(--black);
+
+            .logo { color: var(--primary); }
+            .logo span { color: var(--accent); }
+            header { background: var(--card-bg-dark); border-bottom-color: var(--border-dark); }
+            nav ul li a { color: var(--text-color); }
+            nav ul li a:hover, nav ul li a.active { color: var(--primary); background-color: rgba(var(--primary-rgb-current), 0.1); }
+            .hamburger { color: var(--text-color); }
+            .user-info span { color: var(--text-color); }
+            .user-avatar { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--button-text-on-primary); }
+            .theme-toggle:hover { background-color: rgba(var(--primary-rgb-current), 0.1); }
+            .tab { background: var(--card-bg-dark); color: var(--text-muted-color); border: 1px solid var(--border-dark);}
+            .tab:hover { background: var(--input-bg-dark); color: var(--primary); border-color: var(--primary);}
+            .tab.active { background: var(--primary); color: var(--button-text-on-primary); border-color: var(--primary); font-weight: 600; }
+            .card { background: var(--card-bg-color); border-color: var(--border-dark); }
+            .card-title { color: var(--text-color); }
+            .item span:first-child { color: var(--text-muted-color); }
+            .item strong { color: var(--text-color); }
+            .item-total { border-top-color: var(--border-dark); color: var(--text-color); }
+            .item-total strong { color: var(--primary); }
+            .parking-spot { color: var(--black) !important; }
+            .parking-spot.available { background: var(--success); }
+            .parking-spot.occupied { background: var(--danger); }
+            .parking-spot.ev-charging { background: var(--info); }
+            .parking-spot.selected { background: var(--warning); color: var(--button-text-on-warning)!important; border: 2px solid var(--black); }
+            .chat-container { background: var(--bg-color); border-color: var(--border-dark); }
+            .chat-message.chat-incoming { background: var(--input-bg-dark); color: var(--text-color); }
+            .chat-message.chat-incoming strong { color: var(--text-muted-color);}
+            .chat-message.chat-outgoing { background: var(--primary); color: var(--button-text-on-primary); }
+            .chat-message.chat-outgoing strong { color: rgba(0, 0, 0, 0.8); } /* Directly use black rgba for simplicity */
+            .form-input, .form-select, .form-textarea { background-color: var(--input-bg-color); border-color: var(--border-dark); color: var(--text-color); }
+            .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted-color);}
+            .form-input:disabled, .form-select:disabled, .form-textarea:disabled { background-color: var(--input-disabled-bg); cursor: not-allowed; opacity: 0.7; }
+            .form-input:focus, .form-select:focus, .form-textarea:focus,
+            .form-input:focus-visible, .form-select:focus-visible, .form-textarea:focus-visible {
+                background-color: var(--card-bg-color);
+            }
+            .form-input[aria-invalid="true"], .form-select[aria-invalid="true"], .form-textarea[aria-invalid="true"] {
+                border-color: var(--danger);
+                box-shadow: 0 0 0 var(--focus-outline-width) rgba(var(--danger-rgb), 0.2); /* Danger ring on error */
+            }
+            .checkmark { background-color: var(--input-bg-dark); border-color: var(--border-dark); }
+            .checkbox-container input:checked ~ .checkmark { background-color: var(--primary); border-color: var(--primary); }
+            .checkmark:after { border-color: var(--button-text-on-primary); }
+            .quantity-controls .btn-sm { background-color: var(--input-bg-dark); color: var(--text-color); border-color: var(--border-dark);}
+            .quantity-controls .btn-sm:hover { background-color: var(--border-dark); color: var(--text-color);}
+            .quantity-controls span { color: var(--text-color); }
+            .service-item, .commodity-item, .item-list > li { border-bottom-color: var(--border-dark); }
+            .service-item .details div:first-child, .commodity-item .details div:first-child { color: var(--text-color); }
+            .service-item .details .text-muted, .commodity-item .details .text-muted { color: var(--text-muted-color); }
+            .service-item .price-tag, .commodity-item .price-tag { color: var(--secondary); }
+            .total-price-section { border-top-color: var(--border-dark); background-color: rgba(var(--primary-rgb-current), 0.1); }
+            .total-price-section .total-label { color: var(--text-muted-dark); }
+            .total-price-section .total-amount { color: var(--primary); }
+            footer { background: #0a0a0a; border-top-color: var(--primary); }
+            .footer-section p, .footer-section ul li a, .footer-section .social-links a { color: var(--text-muted-dark); }
+            .footer-section ul li a:hover, .footer-section .social-links a:hover { color: var(--primary); }
+            .footer-bottom { border-top-color: rgba(255, 255, 255, 0.05); color: var(--text-muted-dark); }
+            .status-paid, .status-available, .status-confirmed, .status-active { background: rgba(140, 233, 154, 0.15); color: var(--success-dark); }
+            .status-pending, .status-processing { background: rgba(255, 192, 120, 0.15); color: var(--warning-dark); }
+            .status-overdue, .status-occupied, .status-danger { background: rgba(255, 135, 135, 0.15); color: var(--danger-dark); }
+            .status-reserved, .status-info { background: rgba(165, 216, 255, 0.15); color: var(--info-dark); }
+            .status-ev { background: rgba(165, 216, 255, 0.2); color: var(--info-dark); }
+            .rating-comment { background: var(--input-bg-dark); color: var(--text-muted-color); }
+            .empty-state { background: var(--input-bg-dark); border-color: var(--border-dark); color: var(--text-muted-color); }
+            .item.highlight-new { background-color: rgba(var(--primary-rgb-current), 0.08); border-left-color: var(--primary); }
+            table th .sort-icon { color: var(--text-muted-dark); }
+            table th:hover .sort-icon { color: var(--primary); }
+            .tooltip .tooltiptext { background-color: var(--text-dark); color: var(--bg-dark); }
+            .tooltip .tooltiptext::after { border-color: var(--text-dark) transparent transparent transparent; }
+            .form-feedback.is-error { color: var(--danger-dark); }
+            .form-feedback.is-success { color: var(--success-dark); }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16.5px; }
+        body {
+            background-color: var(--bg-color); color: var(--text-color);
+            font-family: 'Prompt', 'Kanit', sans-serif; line-height: 1.7;
+            font-weight: 400; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            transition: background-color var(--transition-base), color var(--transition-base);
+        }
+        .container { max-width: 1350px; margin: 0 auto; padding: 0 25px; }
+
+        /* --- Header --- */
+        header {
+            background: var(--card-bg-color); padding: 1rem 0; box-shadow: var(--shadow-sm);
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color var(--transition-base), border-color var(--transition-base);
+        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-size: 1.8rem; font-weight: 700; display: flex; align-items: center; gap: 10px;
+            color: var(--primary); text-decoration: none; transition: color var(--transition-base);
+        }
+        .logo i { color: var(--accent); animation: pulse 2.5s infinite ease-in-out; transition: color var(--transition-base); }
+        .logo span { color: var(--accent); transition: color var(--transition-base); }
+        .logo:focus-visible { outline: var(--focus-outline-width) solid var(--focus-ring-color); outline-offset: var(--focus-outline-offset); border-radius: var(--border-radius-sm); }
+        nav ul { display: flex; list-style: none; gap: 0.5rem; }
+        nav ul li a {
+            color: var(--text-color); text-decoration: none; font-weight: 500; padding: 0.6rem 1rem;
+            border-radius: var(--border-radius-pill); transition: color var(--transition-fast), background-color var(--transition-fast), outline var(--transition-fast);
+            display: block; position: relative;
+        }
+        nav ul li a::after {
+            content: ''; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%) scaleX(0);
+            width: 60%; height: 2px; background-color: var(--primary);
+            transition: transform var(--transition-base); transform-origin: center;
+        }
+        nav ul li a:hover, nav ul li a.active { color: var(--primary); background-color: rgba(var(--primary-rgb-current), 0.05); }
+        nav ul li a:hover::after, nav ul li a.active::after { transform: translateX(-50%) scaleX(1); }
+        nav ul li a:focus-visible { outline: var(--focus-outline-width) solid var(--focus-ring-color); outline-offset: var(--focus-outline-offset); color: var(--primary); }
+        .user-controls { display: flex; align-items: center; gap: 15px; }
+        .user-info { display: flex; align-items: center; gap: 10px; }
+        .user-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--button-text-on-primary);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; font-weight: bold; box-shadow: var(--shadow-sm);
+        }
+        .user-info span { font-weight: 500; color: var(--text-color); transition: color var(--transition-base); }
+        .theme-toggle {
+            background: none; border: none; color: var(--text-muted-color); font-size: 1.3rem;
+            cursor: pointer; padding: 5px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            transition: color var(--transition-fast), background-color var(--transition-fast), outline var(--transition-fast);
+        }
+        .theme-toggle:hover { color: var(--primary); background-color: rgba(var(--primary-rgb-current), 0.1); }
+        .theme-toggle:focus-visible { outline: var(--focus-outline-width) solid var(--focus-ring-color); outline-offset: var(--focus-outline-offset); color: var(--primary); }
+        .hamburger {
+            display: none; font-size: 1.8rem; background: none; border: none;
+            color: var(--text-color); cursor: pointer; transition: color var(--transition-base), outline var(--transition-fast);
+            padding: 5px; border-radius: var(--border-radius-sm);
+        }
+        .hamburger:focus-visible { outline: var(--focus-outline-width) solid var(--focus-ring-color); outline-offset: 0; }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=70') center/cover no-repeat; /* Reduced quality */
+            color: var(--white); text-align: center; padding: 6rem 1.5rem; margin: 2.5rem 0;
+            border-radius: var(--border-radius-xl); position: relative; overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .hero-content { position: relative; z-index: 1; animation: fadeInHero 1s ease-out; }
+        .hero h1 { font-size: 3.1rem; margin-bottom: 1rem; font-weight: 700; text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6); }
+        .hero p { font-size: 1.3rem; max-width: 750px; margin: 0 auto 2.5rem; font-weight: 300; opacity: 0.95; }
+
+        /* --- Tabs --- */
+        .tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; transition: border-color var(--transition-base); }
+        .tab { padding: 10px 20px; cursor: pointer; background: var(--card-bg-color); border-radius: var(--border-radius-pill); transition: all var(--transition-base); font-weight: 500; color: var(--text-muted-color); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); outline: none; }
+        .tab:hover { background: var(--input-bg-color); color: var(--primary); border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .tab.active { background: var(--primary); color: var(--button-text-on-primary); font-weight: 600; box-shadow: var(--shadow-md); border-color: var(--primary); transform: translateY(0); }
+        .tab:focus-visible { box-shadow: 0 0 0 var(--focus-outline-width) var(--focus-ring-color); border-color: var(--primary); z-index: 1; }
+        .tab-content { display: none; animation: fadeIn 0.5s ease; }
+        .tab-content.active { display: block; }
+
+        /* --- Dashboard Grid --- */
+        .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-top: 20px; }
+
+        /* --- Card Base Style --- */
+        .card {
+            background: var(--card-bg-color); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-current); padding: 30px;
+            transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+            position: relative; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+        .card:focus-within { box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: var(--primary); outline: 2px solid transparent; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 15px; }
+        .card-title { font-size: 1.45rem; font-weight: 600; color: var(--text-color); flex-grow: 1; transition: color var(--transition-base); }
+        .card-icon { width: 50px; height: 50px; border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.6rem; flex-shrink: 0; transition: transform var(--transition-fast); }
+        /* Specific Icon Colors */
+        .card-icon.bills { background: linear-gradient(135deg, #ff8787, #f783ac); }
+        .card-icon.parking { background: linear-gradient(135deg, #74c0fc, #4dabf7); }
+        .card-icon.cleaning { background: linear-gradient(135deg, #8ce99a, #69db7c); }
+        .card-icon.delivery { background: linear-gradient(135deg, #ffd43b, #fcc419); color: var(--black);}
+        .card-icon.transport { background: linear-gradient(135deg, #bac8ff, #91a7ff); }
+        .card-icon.chat { background: linear-gradient(135deg, #e599f7, #da77f2); }
+        .card-icon.rating { background: linear-gradient(135deg, #ffc078, #ffa94d); color: var(--black);}
+        .card-icon.maintenance { background: linear-gradient(135deg, #99e9f2, #66d9e8); color: var(--black);}
+        .card-icon.rooms { background: linear-gradient(135deg, #b197fc, #9775fa); }
+        .card-icon.facility { background: linear-gradient(135deg, #63e6be, #38d9a9); color: var(--black);}
+        .card-icon.laundry { background: linear-gradient(135deg, #a5d8ff, #74c0fc); color: var(--black);}
+        .card-icon.announce { background: linear-gradient(135deg, #ffec99, #ffe066); color: var(--black);}
+        .card-icon.commodities { background: linear-gradient(135deg, #fcc2d7, #faa2c1); color: var(--black);}
+        .card-icon.market { background: linear-gradient(135deg, #d0bfff, #b197fc); }
+        .card:hover .card-icon { transform: scale(1.1) rotate(-5deg); }
+        .card-content { font-size: 1rem; color: var(--text-muted-color); flex-grow: 1; display: flex; flex-direction: column; transition: color var(--transition-base); }
+        .card-content p { margin-bottom: 15px; }
+        .card-content h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; margin-top: 20px; color: var(--text-color); }
+        .card-footer { margin-top: auto; padding-top: 25px; }
+        .card.is-urgent { border-left: 5px solid var(--danger); animation: subtlePulseBorder 2s infinite; }
+        .card.is-urgent .card-title::after { content: " !"; color: var(--danger); font-weight: bold; }
+
+        /* --- Empty State Placeholder --- */
+        .empty-state {
+            text-align: center; padding: 50px 25px; border: 2px dashed var(--border-color);
+            border-radius: var(--border-radius-md); margin-top: 20px;
+            background: rgba(128, 128, 128, 0.04); color: var(--text-muted-color);
+            transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+        }
+        .empty-state i { font-size: 2.8rem; margin-bottom: 18px; opacity: 0.4; }
+        .empty-state p { font-size: 1.05rem; font-weight: 500; line-height: 1.5; }
+        .empty-state .btn { margin-top: 20px; }
+
+        /* --- Buttons --- */
+        .btn {
+            padding: 0.8rem 1.8rem; border: none; border-radius: var(--border-radius-pill); cursor: pointer; font-weight: 600; text-decoration: none;
+            transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-base), outline var(--transition-fast), filter var(--transition-fast), color var(--transition-fast);
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-align: center; font-size: 0.95rem; border: 2px solid transparent; position: relative; overflow: hidden; z-index: 1;
+        }
+        .btn-primary { background: var(--primary); color: var(--button-text-on-primary); }
+        .btn-secondary { background: var(--secondary); color: var(--button-text-on-secondary); }
+        .btn-success { background: var(--success); color: var(--button-text-on-success); }
+        .btn-warning { background: var(--warning); color: var(--button-text-on-warning); }
+        .btn-danger { background: var(--danger); color: var(--button-text-on-danger); }
+        .btn-info { background: var(--info); color: var(--button-text-on-info); }
+        .btn:disabled, .btn.disabled { opacity: 0.65; cursor: not-allowed; transform: none !important; box-shadow: none !important; filter: none !important; }
+        .btn:active:not(:disabled) { transform: translateY(1px) scale(0.98); box-shadow: none; }
+        .btn:focus-visible { outline: var(--focus-outline-width) solid var(--focus-ring-color); outline-offset: var(--focus-outline-offset); box-shadow: var(--shadow-md); }
+        .btn:hover:not(:disabled) { filter: brightness(90%); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+        .btn:hover:focus-visible:not(:disabled) { filter: brightness(90%); transform: translateY(-3px); }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover:not(:disabled) { background: var(--primary); color: var(--button-text-on-primary); }
+        .btn-outline:focus-visible { outline: none; box-shadow: 0 0 0 var(--focus-outline-width) var(--focus-ring-color); background: rgba(var(--primary-rgb-current), 0.1); }
+        .btn-outline-secondary { border-color: var(--secondary); color: var(--secondary); }
+        .btn-outline-secondary:hover:not(:disabled) { background: var(--secondary); color: var(--button-text-on-secondary); }
+        .btn-outline-secondary:focus-visible { outline: none; box-shadow: 0 0 0 var(--focus-outline-width) rgba(var(--secondary-rgb-current), 0.3); background: rgba(var(--secondary-rgb-current), 0.1); }
+        .btn-sm { padding: 0.5rem 1rem; font-size: 0.85rem; gap: 5px; }
+        .btn-block { display: flex; width: 100%; }
+        /* Loading Spinner in Button */
+        .btn .spinner { display: none; }
+        .btn.is-loading .spinner { display: inline-block; animation: spin 1s linear infinite; margin-right: 8px; }
+        .btn.is-loading .btn-text { opacity: 0; } /* Hide text when loading */
+        .btn .btn-text { transition: opacity 0.2s ease; }
+        .btn.is-loading { pointer-events: none; /* Prevent clicking while loading */ }
+
+        /* --- Status Labels --- */
+        .status { padding: 6px 14px; border-radius: var(--border-radius-pill); font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; text-align: center; transition: background-color var(--transition-base), color var(--transition-base); }
+        .status-paid, .status-available, .status-confirmed, .status-active { background: rgba(105, 219, 124, 0.15); color: color-mix(in srgb, var(--success-light), black 20%); }
+        .status-pending, .status-processing { background: rgba(255, 146, 43, 0.15); color: color-mix(in srgb, var(--warning-light), black 20%); }
+        .status-overdue, .status-occupied, .status-danger { background: rgba(250, 82, 82, 0.15); color: color-mix(in srgb, var(--danger-light), black 10%); }
+        .status-reserved, .status-info { background: rgba(116, 192, 252, 0.15); color: color-mix(in srgb, var(--info-light), black 20%); }
+        .status-ev { background: rgba(116, 192, 252, 0.2); color: color-mix(in srgb, var(--info-light), black 20%); }
+
+        /* --- Item List --- */
+        .item-list { margin-top: 15px; display: flex; flex-direction: column; gap: 0; list-style: none; padding: 0; }
+        .item-list > li, .item { display: flex; justify-content: space-between; align-items: center; padding: 14px 5px; border-bottom: 1px solid var(--border-color); font-size: 0.98rem; transition: border-color var(--transition-base), background-color var(--transition-fast); }
+        .item-list > li:last-child, .item:last-child { border-bottom: none; }
+        .item-list > li span:first-child, .item span:first-child { color: var(--text-muted-color); display: flex; align-items: center; gap: 8px; transition: color var(--transition-base); }
+        .item-list > li strong, .item strong { font-weight: 600; color: var(--text-color); transition: color var(--transition-base); }
+        .item-list > li .btn-sm, .item .btn-sm { margin-left: 10px; }
+        .item.highlight-new { background-color: rgba(var(--primary-rgb-current), 0.05); border-left: 4px solid var(--primary); padding-left: 10px; margin-left: -10px; border-radius: var(--border-radius-sm); animation: fadeInHighlight 0.8s ease; }
+        .item-total { padding-top: 18px; border-top: 2px solid var(--text-color); margin-top: 18px; font-weight: 700; font-size: 1.15rem; color: var(--text-color); transition: border-color var(--transition-base), color var(--transition-base); }
+        .item-total strong { color: var(--primary); font-size: 1.2em; }
+
+        /* --- Parking Specific --- */
+        .parking-lot { display: grid; grid-template-columns: repeat(auto-fit, minmax(85px, 1fr)); gap: 12px; margin-top: 15px; }
+        .parking-spot {
+            height: 60px; border-radius: var(--border-radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center;
+            font-size: 0.85rem; font-weight: 600; transition: transform var(--transition-fast), box-shadow var(--transition-fast), outline var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+            cursor: pointer; position: relative; border: 1px solid rgba(0,0,0,0.1); color: var(--black); box-shadow: var(--shadow-sm); outline: none;
+        }
+        .parking-spot:hover:not(.occupied):not(.ev-charging) { transform: scale(1.08); box-shadow: var(--shadow-md); z-index: 2; }
+        .parking-spot:focus-visible { outline: var(--focus-outline-width) solid var(--focus-ring-color); outline-offset: var(--focus-outline-offset); box-shadow: var(--shadow-md); transform: scale(1.08); z-index: 3; }
+        .parking-spot.available { background: var(--success); }
+        .parking-spot.occupied { background: var(--danger); cursor: not-allowed; opacity: 0.8; }
+        .parking-spot.ev-charging { background: var(--info); cursor: help; }
+        .parking-spot.selected { background: var(--warning); color: var(--button-text-on-warning) !important; border: 2px solid var(--black); transform: scale(1.05); box-shadow: var(--shadow-md); }
+        .parking-spot i { margin-bottom: 5px; font-size: 1.1rem; }
+        .parking-spot.occupied i { opacity: 0.7; }
+
+        /* Simple Tooltip */
+        .tooltip { position: relative; display: inline-block; }
+        .tooltip .tooltiptext {
+            visibility: hidden; width: 140px; background-color: var(--text-light); color: var(--white); text-align: center;
+            border-radius: var(--border-radius-sm); padding: 5px 8px; position: absolute; z-index: 10;
+            bottom: 125%; left: 50%; margin-left: -70px; opacity: 0; transition: opacity 0.3s; font-size: 0.8rem; font-weight: 400;
+        }
+        .tooltip .tooltiptext::after {
+            content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px;
+            border-style: solid; border-color: var(--text-light) transparent transparent transparent;
+        }
+        .tooltip:hover .tooltiptext, .tooltip:focus-within .tooltiptext { visibility: visible; opacity: 1; }
+
+        /* --- Chat Specific --- */
+        .chat-container {
+            height: 320px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: var(--border-radius-md); padding: 20px; margin-bottom: 15px;
+            background: var(--bg-color); display: flex; flex-direction: column; gap: 15px; transition: background-color var(--transition-base), border-color var(--transition-base);
+        }
+        .chat-container::-webkit-scrollbar { width: 8px; }
+        .chat-container::-webkit-scrollbar-track { background: transparent; }
+        .chat-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px;}
+        .chat-container::-webkit-scrollbar-thumb:hover { background: var(--text-muted-color); }
+        .chat-message {
+            padding: 12px 18px; border-radius: var(--border-radius-lg); max-width: 85%; position: relative;
+            font-size: 0.98rem; line-height: 1.5; word-wrap: break-word;
+            transition: background-color var(--transition-base), color var(--transition-base); box-shadow: var(--shadow-sm);
+            animation: fadeInMessage 0.4s ease-out;
+        }
+        .chat-message strong { font-weight: 600; display: block; margin-bottom: 4px; font-size: 0.85rem; opacity: 0.8; }
+        .chat-message .timestamp { font-size: 0.75rem; color: inherit; opacity: 0.6; display: block; margin-top: 5px; text-align: right; }
+        .chat-incoming { background: var(--card-bg-color); color: var(--text-color); align-self: flex-start; border-bottom-left-radius: var(--border-radius-sm); }
+        .chat-incoming strong { color: var(--text-muted-color);}
+        .chat-outgoing { background: var(--primary); color: var(--button-text-on-primary); align-self: flex-end; margin-left: auto; border-bottom-right-radius: var(--border-radius-sm); }
+        .chat-outgoing strong { color: rgba(0, 0, 0, 0.8); } /* Use rgba for potential dark mode adjustment */
+        .chat-form { display: flex; gap: 10px; margin-top: auto; }
+        .chat-input { flex: 1; }
+        .chat-form .btn { padding: 0.8rem 1.2rem; }
+
+        /* --- Rating Specific --- */
+        .rating-stars { color: #ffc107; font-size: 1.3rem; margin: 0 5px; }
+        .rating-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed var(--border-color); transition: border-color var(--transition-base); }
+        .rating-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .rating-comment { margin-top: 10px; padding: 15px; background: var(--input-bg-color); border-radius: var(--border-radius-md); font-size: 0.9rem; color: var(--text-muted-color); border: 1px solid var(--border-color); transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base); }
+
+        /* --- Form Elements Styling --- */
+        .form-input, .form-select, .form-textarea {
+            width: 100%; padding: 0.8rem 1.1rem; border: 1px solid var(--border-color); border-radius: var(--border-radius-md); font-size: 0.98rem; font-family: inherit;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-base), color var(--transition-base);
+            background-color: var(--input-bg-color); color: var(--text-color); outline: none;
+        }
+        .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted-color); opacity: 0.8; transition: color var(--transition-base); }
+        .form-input:disabled, .form-select:disabled, .form-textarea:disabled { background-color: var(--input-disabled-bg); cursor: not-allowed; opacity: 0.7; }
+        .form-input:focus, .form-select:focus, .form-textarea:focus,
+        .form-input:focus-visible, .form-select:focus-visible, .form-textarea:focus-visible {
+            border-color: var(--primary); box-shadow: 0 0 0 var(--focus-outline-width) var(--focus-ring-color); background-color: var(--card-bg-color);
+        }
+        .form-input[aria-invalid="true"], .form-select[aria-invalid="true"], .form-textarea[aria-invalid="true"] {
+            border-color: var(--danger); /* Use danger color */
+            box-shadow: 0 0 0 var(--focus-outline-width) rgba(var(--danger-rgb, 250, 82, 82), 0.3); /* Danger focus ring */
+        }
+        .form-textarea { min-height: 100px; resize: vertical; }
+        .form-label { display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.95rem; }
+        .form-group { margin-bottom: 20px; }
+        .form-group-inline { display: flex; gap: 15px; align-items: center; }
+        .form-group-inline > * { flex: 1; }
+        .form-feedback { font-size: 0.85rem; margin-top: 5px; display: block; min-height: 1.2em; /* Prevent layout shift */ }
+        .form-feedback.is-error { color: var(--danger); font-weight: 500; }
+        .form-feedback.is-success { color: var(--success); font-weight: 500; }
+
+        /* Custom Checkbox */
+        .checkbox-container { display: inline-flex; align-items: center; position: relative; cursor: pointer; font-size: 0.98rem; user-select: none; gap: 12px; min-height: 24px; padding: 5px 0; }
+        .checkbox-container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+        .checkmark { position: relative; height: 22px; width: 22px; background-color: var(--input-bg-color); border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); transition: all var(--transition-fast); flex-shrink: 0; display: inline-block; }
+        .checkbox-container input:focus-visible ~ .checkmark { box-shadow: 0 0 0 var(--focus-outline-width) var(--focus-ring-color); border-color: var(--primary); }
+        .checkbox-container:hover input ~ .checkmark { border-color: var(--text-muted-color); }
+        .checkbox-container input:checked ~ .checkmark { background-color: var(--primary); border-color: var(--primary); animation: checkmark-pop 0.3s ease-out; }
+        @keyframes checkmark-pop { 0% { transform: scale(0.8); opacity: 0.5;} 80% { transform: scale(1.1); opacity: 1;} 100% { transform: scale(1); opacity: 1;} }
+        .checkmark:after { content: ""; position: absolute; display: none; left: 7px; top: 3px; width: 6px; height: 12px; border: solid var(--button-text-on-primary); border-width: 0 3px 3px 0; transform: rotate(45deg); }
+        .checkbox-container input:checked ~ .checkmark:after { display: block; }
+        .checkbox-container .label-text { line-height: 1.4; }
+
+        /* Quantity Controls */
+        .quantity-controls { display: flex; align-items: center; gap: 8px; }
+        .quantity-controls .btn-sm { padding: 0.3rem 0.7rem; line-height: 1; background-color: var(--input-bg-color); color: var(--text-color); border: 1px solid var(--border-color); transition: background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), outline var(--transition-fast); border-radius: var(--border-radius-sm); }
+        .quantity-controls .btn-sm:hover { background-color: var(--border-color); }
+        .quantity-controls .btn-sm:active { transform: scale(0.95); }
+        .quantity-controls .btn-sm:focus-visible { outline: 2px solid var(--focus-ring-color); outline-offset: 1px; border-color: var(--primary); z-index: 1; }
+        .quantity-controls span { font-weight: 600; min-width: 30px; text-align: center; font-size: 1rem; color: var(--text-color); }
+
+        /* Service/Commodity Items */
+        .service-item, .commodity-item { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--border-color); gap: 25px; transition: border-color var(--transition-base); }
+        .service-item:last-child, .commodity-item:last-child { border-bottom: none; }
+        .service-item .details, .commodity-item .details { flex-grow: 1; }
+        .service-item .details div:first-child, .commodity-item .details div:first-child { font-weight: 500; font-size: 1.05rem; color: var(--text-color); }
+        .service-item .details .text-muted, .commodity-item .details .text-muted { font-size: 0.9rem; color: var(--text-muted-color); }
+        .service-item .price-tag, .commodity-item .price-tag { font-weight: 600; white-space: nowrap; color: var(--secondary); font-size: 1rem;}
+        .service-item input[type="number"], .commodity-item input[type="number"] { width: 70px; padding: 6px 10px; text-align: center; }
+        .total-price-section { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; padding: 20px; border-top: 1px solid var(--border-color); background-color: rgba(var(--primary-rgb-current), 0.05); border-radius: var(--border-radius-md); transition: background-color var(--transition-base), border-color var(--transition-base); }
+        .total-price-section .total-label { font-size: 1rem; color: var(--text-muted-color); }
+        .total-price-section .total-amount { font-size: 1.7em; font-weight: 700; color: var(--primary); }
+
+        /* Table Styles */
+         table { width:100%; border-collapse: collapse; text-align: left; margin-top: 1rem; }
+         table th, table td { padding: 12px 8px; border-bottom: 1px solid var(--border-color); transition: border-color var(--transition-base), background-color var(--transition-fast); }
+         table thead th { font-weight: 600; border-bottom-width: 2px; border-bottom-color: var(--text-color); position: sticky; top: 60px; /* Adjust based on header height */ background: var(--card-bg-color); z-index: 1; }
+         table tbody tr:hover { background-color: rgba(var(--primary-rgb-current), 0.03); }
+         table td:last-child { text-align: right; }
+         table .btn-sm { margin: 0 2px; /* Spacing for buttons */ }
+         /* Sorting Styles */
+         table th[aria-sort] { cursor: pointer; position: relative; }
+         table th[aria-sort] .sort-icon { font-size: 0.8em; margin-left: 5px; color: var(--text-muted-color); transition: color 0.2s ease; }
+         table th[aria-sort]:hover .sort-icon { color: var(--primary); }
+         table th[aria-sort="ascending"] .sort-icon::before { content: "\f0de"; /* fa-sort-up */ font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--primary); }
+         table th[aria-sort="descending"] .sort-icon::before { content: "\f0dd"; /* fa-sort-down */ font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--primary); }
+
+
+        /* --- Footer --- */
+        footer {
+            background: var(--text-light); color: var(--bg-light); padding: 50px 0 25px 0; margin-top: 80px; border-top: 6px solid var(--primary);
+            transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+        }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h3 { color: var(--primary); margin-bottom: 20px; font-weight: 600; font-size: 1.25rem; }
+        .footer-section p { font-size: 0.98rem; line-height: 1.7; color: #e0e0e0; }
+        body:not(.dark-mode) .footer-section p { color: #e9ecef;}
+        body.dark-mode .footer-section p { color: var(--text-muted-dark); }
+        .footer-section ul { list-style: none; padding: 0; margin: 0; }
+        .footer-section ul li { margin-bottom: 10px; }
+        .footer-section ul li a { color: #e0e0e0; text-decoration: none; transition: color var(--transition-fast), transform var(--transition-fast), outline var(--transition-fast); font-size: 0.98rem; display: inline-block; border-radius: var(--border-radius-sm); }
+        body:not(.dark-mode) .footer-section ul li a { color: #e9ecef;}
+        body.dark-mode .footer-section ul li a { color: var(--text-muted-dark); }
+        .footer-section ul li a:hover { color: var(--primary); transform: translateX(5px); }
+        .footer-section ul li a:focus-visible { color: var(--primary); outline: 2px solid var(--primary); outline-offset: var(--focus-outline-offset); background-color: rgba(var(--primary-rgb-current), 0.1); }
+        .footer-section .social-links a { color: #e0e0e0; margin-right: 18px; font-size: 1.6rem; transition: color var(--transition-fast), transform var(--transition-fast), outline var(--transition-fast); display: inline-block; border-radius: var(--border-radius-sm); }
+        body:not(.dark-mode) .footer-section .social-links a { color: #e9ecef; }
+        body.dark-mode .footer-section .social-links a { color: var(--text-muted-dark); }
+        .footer-section .social-links a:hover { color: var(--primary); transform: scale(1.15); }
+        .footer-section .social-links a:focus-visible { color: var(--primary); transform: scale(1.1); outline: 2px solid var(--primary); outline-offset: 3px; }
+        .footer-bottom { text-align: center; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.9rem; color: #adb5bd; transition: border-color var(--transition-base), color var(--transition-base); }
+        body:not(.dark-mode) .footer-bottom { color: #adb5bd; }
+        body.dark-mode .footer-bottom { color: var(--text-muted-dark); border-top-color: rgba(255, 255, 255, 0.05); }
+
+        /* --- Utility Classes --- */
+        .text-muted { color: var(--text-muted-color) !important; }
+        .text-primary { color: var(--primary) !important; }
+        .text-success { color: var(--success) !important; }
+        .text-danger { color: var(--danger) !important; }
+        .mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mt-3 { margin-top: 1.5rem; } .mt-4 { margin-top: 2rem; } .mt-5 { margin-top: 3rem; }
+        .mb-1 { margin-bottom: 0.5rem; } .mb-2 { margin-bottom: 1rem; } .mb-3 { margin-bottom: 1.5rem; } .mb-4 { margin-bottom: 2rem; } .mb-5 { margin-bottom: 3rem; }
+        .me-1 { margin-right: 0.25rem; } .me-2 { margin-right: 0.5rem; } .me-3 { margin-right: 1rem; }
+        .ms-1 { margin-left: 0.25rem; } .ms-2 { margin-left: 0.5rem; } .ms-3 { margin-left: 1rem; }
+        .list-unstyled { list-style: none; padding: 0; margin: 0; }
+        .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
+
+        /* --- Animations --- */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInHero { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInMessage { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        @keyframes fadeInHighlight { from { opacity: 0.5; background-color: rgba(var(--primary-rgb-current), 0.15); } to { opacity: 1; background-color: rgba(var(--primary-rgb-current), 0.05); } }
+        @keyframes pulse { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.15); opacity: 1; } 100% { transform: scale(1); opacity: 0.8;} }
+        @keyframes subtlePulseBorder { 0%, 100% { border-left-color: var(--danger); } 50% { border-left-color: color-mix(in srgb, var(--danger), white 20%); } }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+
+        /* --- Responsive Design --- */
+        @media (max-width: 1200px) { .container { max-width: 1140px; } }
+        @media (max-width: 992px) {
+            html { font-size: 16px; }
+            .container { max-width: 960px; padding: 0 20px;}
+            .dashboard { grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
+            .hero { padding: 5rem 1.5rem; } .hero h1 { font-size: 2.8rem; } .hero p { font-size: 1.2rem; }
+            table thead th { top: 55px; } /* Adjust sticky top for header */
+        }
+        @media (max-width: 768px) {
+            html { font-size: 15.5px; }
+            .container { padding: 0 15px; }
+            .header-content { position: relative; flex-wrap: wrap; padding-bottom: 5px;}
+            .logo { margin-bottom: 10px; font-size: 1.6rem; width: auto; text-align: left; flex-grow: 1; /* Allow logo to grow */ }
+            .user-controls { order: 2; flex-shrink: 0; }
+            .hamburger { display: block; order: 1; position: static; margin-right: 10px; }
+            nav { display: none; order: 3; width: 100%; background: var(--card-bg-color); box-shadow: var(--shadow-md); padding: 15px 0; border-top: 1px solid var(--border-color); z-index: 999; margin-top: 10px; }
+            nav.active { display: block; animation: fadeIn 0.3s ease; }
+            nav ul { flex-direction: column; gap: 5px; align-items: center; }
+            nav ul li { width: 90%; }
+            nav ul li a { padding: 0.8rem 1.5rem; text-align: center; width: 100%; }
+            .dashboard { grid-template-columns: 1fr; gap: 20px; }
+            .hero { padding: 4rem 1rem; } .hero h1 { font-size: 2.3rem; } .hero p { font-size: 1.1rem; }
+            .tabs { justify-content: flex-start; overflow-x: auto; padding-bottom: 15px; margin-bottom: 2rem; flex-wrap: nowrap; }
+            .tabs::-webkit-scrollbar { height: 4px; }
+            .tabs::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 2px;}
+            .card { padding: 25px; }
+            .card-title { font-size: 1.35rem; }
+            .total-price-section { flex-direction: column; align-items: stretch; gap: 15px;}
+            .total-price-section .btn { width: 100%; margin-top: 10px; }
+            .service-item, .commodity-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .service-item .price-tag, .commodity-item .price-tag { margin-top: 5px; }
+            .quantity-controls { justify-content: flex-start; margin-top: 8px; }
+            /* Bill table adjustments */
+            table th, table td { padding: 10px 6px; font-size: 0.9rem; }
+            table td:last-child { text-align: left; white-space: nowrap;}
+            table .btn-sm { margin-bottom: 5px; /* Stack buttons if needed */ }
+            table thead th { top: 110px; /* Adjust sticky top for expanded header */ }
+        }
+        @media (max-width: 480px) {
+            html { font-size: 15px; }
+            .container { padding: 0 10px; }
+            .card { padding: 20px; }
+            .card-title { font-size: 1.25rem; }
+            .card-icon { width: 45px; height: 45px; font-size: 1.4rem;}
+            .hero { padding: 3.5rem 1rem; } .hero h1 { font-size: 2rem; } .hero p { font-size: 1.05rem; }
+            .btn { padding: 0.75rem 1.5rem; font-size: 0.95rem; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; gap: 30px;}
+            .footer-section h3 { margin-top: 25px; } .footer-section:first-child h3 { margin-top: 0;}
+            .footer-section .social-links { text-align: center; }
+            .form-group-inline { flex-direction: column; align-items: stretch; gap: 15px; }
+            .header-content { align-items: center; }
+            .logo { font-size: 1.5rem; }
+             table th, table td { font-size: 0.85rem; }
+             table thead th { top: 105px; /* Adjust sticky top for expanded header */ }
+        }
+        /* --- END CSS --- */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo no-underline">
+                <i class="fas fa-building" aria-hidden="true"></i> Condo<span>Connect</span>
+            </a>
+
+             <button class="hamburger" aria-label="เมนูหลัก" aria-expanded="false" aria-controls="main-navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <span class="visually-hidden">เปิด/ปิด เมนู</span>
+            </button>
+
+            <nav id="main-navigation">
+                 <ul role="menubar" aria-label="การนำทางหลัก">
+                    <li role="none"><a href="#dashboard" class="active" role="menuitem" id="nav-dashboard" data-target="dashboard">หน้าหลัก</a></li>
+                    <li role="none"><a href="#bills" role="menuitem" id="nav-bills" data-target="bills">บิลค่าใช้จ่าย</a></li>
+                    <li role="none"><a href="#parking" role="menuitem" id="nav-parking" data-target="parking">ที่จอดรถ</a></li>
+                    <li role="none"><a href="#delivery" role="menuitem" id="nav-delivery" data-target="delivery">พัสดุ</a></li>
+                    <li role="none"><a href="#community" role="menuitem" id="nav-community" data-target="community">ชุมชน</a></li>
+                    <li role="none"><a href="#transport" role="menuitem" id="nav-transport" data-target="transport">การเดินทาง</a></li>
+                    <li role="none"><a href="#services" role="menuitem" id="nav-services" data-target="services">บริการเสริม</a></li>
+                    <li role="none"><a href="#maintenance" role="menuitem" id="nav-maintenance" data-target="maintenance">แจ้งซ่อม/อื่นๆ</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-controls">
+                 <div class="user-info">
+                    <div class="user-avatar" aria-hidden="true">S</div>
+                    <span>ห้อง 205</span>
+                </div>
+                <button class="theme-toggle" id="theme-toggle-button" aria-label="สลับโหมดธีม">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                    <span class="visually-hidden">สลับธีมมืด/สว่าง</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>ยินดีต้อนรับสู่ CondoConnect</h1>
+                <p>ชีวิตคอนโดง่ายขึ้นสำหรับนักศึกษา - จัดการบิล ที่จอดรถ พัสดุ และชุมชนในที่เดียว</p>
+                <a href="#dashboard" class="btn btn-lg btn-secondary trigger-tab" data-target-tab="dashboard">ดูภาพรวมของคุณ</a>
+            </div>
+        </section>
+
+        <section class="tabs-container" aria-label="ส่วนเนื้อหาหลัก">
+            <div class="tabs" role="tablist">
+                <button class="tab active" data-tab="dashboard" role="tab" aria-selected="true" aria-controls="dashboard-panel" id="dashboard-tab" tabindex="0">หน้าหลัก</button>
+                <button class="tab" data-tab="bills" role="tab" aria-selected="false" aria-controls="bills-panel" id="bills-tab" tabindex="-1">บิลค่าใช้จ่าย</button>
+                <button class="tab" data-tab="parking" role="tab" aria-selected="false" aria-controls="parking-panel" id="parking-tab" tabindex="-1">ที่จอดรถ</button>
+                <button class="tab" data-tab="delivery" role="tab" aria-selected="false" aria-controls="delivery-panel" id="delivery-tab" tabindex="-1">พัสดุ</button>
+                <button class="tab" data-tab="community" role="tab" aria-selected="false" aria-controls="community-panel" id="community-tab" tabindex="-1">ชุมชน</button>
+                <button class="tab" data-tab="transport" role="tab" aria-selected="false" aria-controls="transport-panel" id="transport-tab" tabindex="-1">การเดินทาง</button>
+                <button class="tab" data-tab="services" role="tab" aria-selected="false" aria-controls="services-panel" id="services-tab" tabindex="-1">บริการเสริม</button>
+                <button class="tab" data-tab="maintenance" role="tab" aria-selected="false" aria-controls="maintenance-panel" id="maintenance-tab" tabindex="-1">แจ้งซ่อม/อื่นๆ</button>
+            </div>
+        </section>
+
+        <!-- DASHBOARD TAB -->
+        <section id="dashboard-panel" class="tab-content active" role="tabpanel" aria-labelledby="dashboard-tab">
+            <h2 class="visually-hidden">หน้าหลัก Dashboard</h2> <!-- Hidden H2 for structure -->
+            <div class="dashboard">
+
+                <!-- Bills Card -->
+                <div class="card is-urgent">
+                    <div class="card-header">
+                        <h3 class="card-title">บิลค่าใช้จ่ายล่าสุด</h3>
+                        <div class="card-icon bills" aria-hidden="true"><i class="fas fa-file-invoice-dollar"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="status status-overdue mb-2"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> เกินกำหนด: กุมภาพันธ์ 2025</div>
+                        <ul class="item-list">
+                            <li class="item"><span scope="row"><i class="fas fa-home text-muted" aria-hidden="true"></i> ค่าเช่า</span><strong>฿8,500</strong></li>
+                            <li class="item"><span scope="row"><i class="fas fa-bolt text-muted" aria-hidden="true"></i> ค่าไฟฟ้า</span><strong>฿857</strong></li>
+                            <li class="item"><span scope="row"><i class="fas fa-tint text-muted" aria-hidden="true"></i> ค่าน้ำ</span><strong>฿320</strong></li>
+                             <li class="item item-total"><span scope="row">รวม</span><strong>฿9,677</strong></li>
+                        </ul>
+                    </div>
+                     <div class="card-footer">
+                        <button type="button" class="btn btn-danger btn-block placeholder-action" data-action="pay_urgent_bill">
+                            <i class="fas fa-credit-card spinner" aria-hidden="true"></i>
+                            <span class="btn-text"><i class="fas fa-credit-card me-1" aria-hidden="true"></i> ชำระเงินด่วน</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Delivery Card -->
+                 <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">พัสดุรอรับ</h3>
+                        <div class="card-icon delivery" aria-hidden="true"><i class="fas fa-box-open"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <p aria-live="polite">คุณมี <strong class="text-primary" style="font-size: 1.2em;">3</strong> พัสดุรอรับใหม่!</p>
+                        <ul class="item-list" aria-label="รายการพัสดุรอรับ">
+                            <li class="item highlight-new"> <!-- Highlight new -->
+                                <span><i class="fas fa-star text-warning me-1" aria-hidden="true"></i> <i class="fas fa-gift text-primary" aria-hidden="true"></i> Kerry Express - 21/02/25</span>
+                                <span class="status status-info">มาใหม่</span>
+                            </li>
+                            <li class="item">
+                                <span><i class="fab fa-shopify text-success" aria-hidden="true"></i> Shopee - 19/02/25</span>
+                                <span class="status status-info">รอรับ</span>
+                            </li>
+                            <li class="item">
+                               <span><i class="fab fa-laravel text-warning" aria-hidden="true"></i> Lazada - 20/02/25</span>
+                                <span class="status status-info">รอรับ</span>
+                            </li>
+                        </ul>
+                    </div>
+                     <div class="card-footer">
+                        <a href="#" class="btn btn-secondary btn-block trigger-tab" data-target-tab="delivery">ดูประวัติพัสดุทั้งหมด</a>
+                    </div>
+                </div>
+
+                 <!-- Parking Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">สถานะที่จอดรถ</h3>
+                         <div class="card-icon parking" aria-hidden="true"><i class="fas fa-parking"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <p>ที่จอดของคุณ: <strong>B12</strong> <span class="status status-available"><i class="fas fa-check-circle" aria-hidden="true"></i> ว่าง</span></p>
+                        <h4><i class="fas fa-car-side me-2" aria-hidden="true"></i> ที่จอดรถผู้มาเยี่ยม (ชั้น A)</h4>
+                        <p class="text-muted"><small>คลิกช่องว่างเพื่อเลือก (จำลอง)</small></p>
+                        <div class="parking-lot" aria-label="แผนผังที่จอดรถผู้มาเยี่ยม ชั้น A">
+                            <button class="parking-spot available tooltip" aria-label="ที่จอด A1 ว่าง">
+                                <i class="fas fa-check" aria-hidden="true"></i> A1
+                                <span class="tooltiptext">ที่จอดว่าง</span>
+                            </button>
+                            <button class="parking-spot occupied tooltip" aria-label="ที่จอด A2 ไม่ว่าง" disabled>
+                                <i class="fas fa-times" aria-hidden="true"></i> A2
+                                <span class="tooltiptext">ไม่ว่าง</span>
+                            </button>
+                             <button class="parking-spot ev-charging tooltip" aria-label="ที่จอด A3 จุดชาร์จ EV" disabled>
+                                <i class="fas fa-charging-station" aria-hidden="true"></i> A3
+                                <span class="tooltiptext">จุดชาร์จ EV (ไม่ว่าง)</span>
+                             </button>
+                            <button class="parking-spot available tooltip" aria-label="ที่จอด A4 ว่าง">
+                                <i class="fas fa-check" aria-hidden="true"></i> A4
+                                <span class="tooltiptext">ที่จอดว่าง</span>
+                            </button>
+                            <button class="parking-spot available tooltip" aria-label="ที่จอด A5 ว่าง">
+                                <i class="fas fa-check" aria-hidden="true"></i> A5
+                                 <span class="tooltiptext">ที่จอดว่าง</span>
+                            </button>
+                            <button class="parking-spot occupied tooltip" aria-label="ที่จอด A6 ไม่ว่าง" disabled>
+                                <i class="fas fa-times" aria-hidden="true"></i> A6
+                                 <span class="tooltiptext">ไม่ว่าง</span>
+                            </button>
+                        </div>
+                        <div id="parking-selection-feedback" class="mt-2 text-primary" aria-live="polite"></div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-secondary btn-block trigger-tab" data-target-tab="parking">จัดการ/จองที่จอดรถผู้มาเยี่ยม</a>
+                    </div>
+                </div>
+
+                <!-- Room Cleaning Service Card -->
+                <div class="card" id="cleaning-service-card">
+                    <div class="card-header">
+                        <h3 class="card-title">บริการทำความสะอาด</h3>
+                        <div class="card-icon cleaning" aria-hidden="true"><i class="fas fa-broom-ball"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="service-item">
+                            <div class="details">
+                                <div>ทำความสะอาดพื้นฐาน</div>
+                                <div class="text-muted">กวาด, ถู, เช็ดฝุ่นพื้นผิว</div>
+                            </div>
+                            <span class="price-tag">฿200</span>
+                        </div>
+
+                        <h4 class="mt-3"><i class="fas fa-plus-circle me-2 text-success" aria-hidden="true"></i> บริการเสริม</h4>
+                         <div class="service-item">
+                             <label class="checkbox-container flex-grow-1">
+                                <input type="checkbox" name="clean_bedsheet" data-price="80">
+                                <span class="checkmark" aria-hidden="true"></span>
+                                <span class="label-text">เปลี่ยนผ้าปูเตียง</span>
+                             </label>
+                             <span class="text-muted">+ ฿80/ชุด</span>
+                         </div>
+                         <div class="service-item">
+                             <label class="checkbox-container flex-grow-1">
+                                <input type="checkbox" name="clean_bathroom" data-price="150">
+                                <span class="checkmark" aria-hidden="true"></span>
+                                <span class="label-text">ทำความสะอาดห้องน้ำพิเศษ</span>
+                             </label>
+                            <span class="text-muted">+ ฿150</span>
+                         </div>
+                         <div class="service-item">
+                            <div class="details">ซักปลอกหมอนเสริม</div>
+                            <div class="quantity-controls" data-price="40">
+                                 <button type="button" class="btn btn-sm quantity-decrease" aria-label="ลดจำนวนปลอกหมอน">-</button>
+                                 <span class="quantity-value" aria-live="polite">0</span>
+                                 <button type="button" class="btn btn-sm quantity-increase" aria-label="เพิ่มจำนวนปลอกหมอน">+</button>
+                             </div>
+                             <span class="text-muted">+ ฿40/ใบ</span>
+                         </div>
+
+                         <h4 class="mt-4"><i class="far fa-calendar-alt me-2" aria-hidden="true"></i> เลือกเวลา</h4>
+                         <div class="form-group-inline">
+                             <select class="form-select" aria-label="เลือกวัน">
+                                <option>วันนี้</option>
+                                <option>พรุ่งนี้</option>
+                                <option>เลือกวันที่...</option>
+                             </select>
+                             <select class="form-select" aria-label="เลือกเวลา">
+                                <option>9:00-10:00</option>
+                                <option>10:00-11:00</option>
+                                <option>13:00-14:00</option>
+                             </select>
+                         </div>
+
+                         <div class="form-group mt-3">
+                             <label for="specialRequests" class="form-label">คำขอพิเศษ (ถ้ามี):</label>
+                             <textarea id="specialRequests" class="form-textarea" rows="2" placeholder="เช่น ไม่ใช้สารเคมีแรง, เน้นทำความสะอาดระเบียง..."></textarea>
+                         </div>
+
+                         <div class="total-price-section mt-4" aria-live="polite" aria-atomic="true"> <!-- Make live region atomic -->
+                             <div>
+                                 <div class="total-label">รวมค่าบริการ (โดยประมาณ):</div>
+                                 <div class="total-amount">฿ 200</div>
+                             </div>
+                             <button type="button" id="confirm-cleaning-btn" class="btn btn-success">
+                                <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                <span class="btn-text"><i class="fas fa-check me-1" aria-hidden="true"></i> ยืนยันบริการ</span>
+                            </button>
+                         </div>
+                         <div id="cleaning-feedback" class="form-feedback mt-3" aria-live="polite"></div> <!-- Feedback Area -->
+                    </div>
+                </div>
+
+                <!-- Transport Card -->
+                 <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">รถรับส่งไปมหาวิทยาลัย</h3>
+                        <div class="card-icon transport" aria-hidden="true"><i class="fas fa-bus-alt"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <p>ตรวจสอบรอบและจองที่นั่งรถรับส่ง</p>
+                        <ul class="item-list" aria-label="รอบรถรับส่งวันนี้">
+                            <li class="item">
+                                <span><i class="far fa-clock text-muted" aria-hidden="true"></i> 08:00</span>
+                                <span><span class="status status-warning">ว่าง 4/10</span></span>
+                                <button type="button" class="btn btn-sm btn-primary placeholder-action" data-action="book_transport_0800">
+                                    <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                    <span class="btn-text">จอง</span>
+                                </button>
+                            </li>
+                            <li class="item">
+                               <span><i class="far fa-clock text-muted" aria-hidden="true"></i> 12:00</span>
+                               <span><span class="status status-available">ว่าง 8/10</span></span>
+                                <button type="button" class="btn btn-sm btn-primary placeholder-action" data-action="book_transport_1200">
+                                    <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                    <span class="btn-text">จอง</span>
+                                </button>
+                            </li>
+                            <li class="item">
+                                <span><i class="far fa-clock text-muted" aria-hidden="true"></i> 17:00</span>
+                                <span><span class="status status-danger">ว่าง 2/10</span></span>
+                                <button type="button" class="btn btn-sm btn-primary placeholder-action" data-action="book_transport_1700">
+                                    <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                    <span class="btn-text">จอง</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                     <div class="card-footer">
+                        <a href="#" class="btn btn-outline-secondary btn-block trigger-tab" data-target-tab="transport">ดูตารางเวลาทั้งหมด</a>
+                    </div>
+                </div>
+
+                <!-- Community Chat Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">แชทชุมชนลูกบ้าน</h3>
+                        <div class="card-icon chat" aria-hidden="true"><i class="fas fa-comments"></i></div>
+                    </div>
+                    <div class="card-content" style="padding-bottom: 0;">
+                        <div class="chat-container" aria-live="polite" aria-relevant="additions" aria-atomic="false"> <!-- Let SR announce additions -->
+                            <div class="chat-message chat-incoming">
+                                <strong>ห้อง 301:</strong> น้ำปิดกี่โมงวันนี้คะ?
+                                <span class="timestamp">10:15 น.</span>
+                            </div>
+                            <div class="chat-message chat-outgoing">
+                                <strong>คุณ (ห้อง 205):</strong> 13:00-16:00 ค่ะ เห็นประกาศแจ้งไว้ 😊
+                                <span class="timestamp">10:17 น.</span>
+                            </div>
+                            <div class="chat-message chat-incoming">
+                                <strong>ห้อง 105:</strong> เย็นนี้ปาร์ตี้ริมสระ ใครไปบ้างค้าบ? 🥳🍕
+                                <span class="timestamp">11:30 น.</span>
+                            </div>
+                             <div class="chat-message chat-incoming">
+                                <strong>ห้อง 408:</strong> เจอกันครับ! 👍
+                                <span class="timestamp">11:32 น.</span>
+                            </div>
+                        </div>
+                        <form class="chat-form mt-3 mb-0" id="chat-form">
+                            <label for="chatMessageInput" class="visually-hidden">พิมพ์ข้อความแชท</label>
+                            <input type="text" id="chatMessageInput" class="form-input chat-input" placeholder="พิมพ์ข้อความ..." aria-label="Chat message input" required>
+                             <button type="submit" class="btn btn-primary" aria-label="ส่งข้อความ">
+                                <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                <span class="btn-text"><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+                            </button>
+                        </form>
+                         <!-- Visually hidden feedback for SR on chat send -->
+                         <div id="chat-feedback" class="visually-hidden" aria-live="assertive"></div>
+                    </div>
+                </div>
+
+                <!-- Neighbour Rating Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">ให้คะแนน / แจ้งปัญหาเพื่อนบ้าน</h3>
+                        <div class="card-icon rating" aria-hidden="true"><i class="fas fa-star"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <p>ให้คะแนนหรือแจ้งปัญหาเกี่ยวกับห้องพักอื่น (การแจ้งจะไม่ระบุตัวตน)</p>
+                        <form id="rating-form" novalidate> <!-- Add novalidate to use custom JS validation -->
+                            <div class="form-group">
+                                <label for="neighbourRoomNumber" class="form-label">หมายเลขห้อง:</label>
+                                <input type="number" id="neighbourRoomNumber" class="form-input" placeholder="เช่น 201" required min="100" max="9999" aria-describedby="neighbourRoomNumberFeedback">
+                                <span id="neighbourRoomNumberFeedback" class="form-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="neighbourRating" class="form-label">ให้คะแนน (1-5 ดาว):</label>
+                                <select id="neighbourRating" class="form-select" required aria-describedby="neighbourRatingFeedback">
+                                    <option value="" disabled selected>เลือกคะแนน...</option>
+                                    <option value="1">1 ดาว ★☆☆☆☆ (แย่มาก)</option>
+                                    <option value="2">2 ดาว ★★☆☆☆ (แย่)</option>
+                                    <option value="3">3 ดาว ★★★☆☆ (พอใช้)</option>
+                                    <option value="4">4 ดาว ★★★★☆ (ดี)</option>
+                                    <option value="5">5 ดาว ★★★★★ (ดีมาก)</option>
+                                </select>
+                                 <span id="neighbourRatingFeedback" class="form-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="neighbourComment" class="form-label">เหตุผล / ความคิดเห็น:</label>
+                                <textarea id="neighbourComment" class="form-textarea" rows="3" placeholder="เช่น เสียงดังรบกวนตอนกลางคืน..." required minlength="10" aria-describedby="neighbourCommentFeedback"></textarea>
+                                <span id="neighbourCommentFeedback" class="form-feedback"></span>
+                            </div>
+                             <div class="form-group">
+                                <label for="neighbourIssueCategory" class="form-label">ประเภทปัญหา (ถ้ามี):</label>
+                                <select id="neighbourIssueCategory" class="form-select">
+                                    <option value="">-- เลือกประเภท --</option>
+                                    <option value="noise">เสียงดัง</option>
+                                    <option value="smell">กลิ่น</option>
+                                    <option value="trash">ขยะ/ความสะอาด</option>
+                                    <option value="other">อื่นๆ</option>
+                                </select>
+                            </div>
+                             <button type="submit" class="btn btn-warning btn-block">
+                                <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                <span class="btn-text"><i class="fas fa-paper-plane me-2" aria-hidden="true"></i> ส่งความคิดเห็น</span>
+                            </button>
+                             <div id="rating-feedback" class="form-feedback mt-3" aria-live="polite"></div> <!-- Feedback Area -->
+                        </form>
+                    </div>
+                    <div class="card-footer" style="padding-top: 15px;">
+                        <p class="text-muted mt-2" style="font-size: 0.85em;">หมายเหตุ: การให้คะแนน/แจ้งปัญหาจะไม่แสดงตัวตนต่อห้องข้างเคียง แต่นิติบุคคลสามารถตรวจสอบข้อมูลเพื่อดำเนินการได้</p>
+                    </div>
+                </div>
+
+                <!-- Maintenance Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">แจ้งซ่อม / ติดตามงาน</h3>
+                        <div class="card-icon maintenance" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <p>ติดตามสถานะงานซ่อม หรือแจ้งปัญหาใหม่</p>
+                        <ul class="item-list" aria-label="รายการแจ้งซ่อมล่าสุด">
+                            <li class="item">
+                                <span><i class="fas fa-lightbulb text-warning" aria-hidden="true"></i> ไฟห้องน้ำเสีย - 15/02/25</span>
+                                <span class="status status-pending">รอดำเนินการ</span>
+                            </li>
+                             <li class="item">
+                                <span><i class="fas fa-faucet text-info" aria-hidden="true"></i> ก๊อกน้ำรั่ว - 10/02/25</span>
+                                <span class="status status-paid"><i class="fas fa-check" aria-hidden="true"></i> เสร็จสิ้น</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#maintenance-panel" class="btn btn-warning btn-block trigger-tab" data-target-tab="maintenance"><i class="fas fa-exclamation-circle me-1" aria-hidden="true"></i> แจ้งซ่อมรายการใหม่</a>
+                    </div>
+                </div>
+
+                 <!-- Announcements Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">ประกาศจากนิติบุคคล</h3>
+                        <div class="card-icon announce" aria-hidden="true"><i class="fas fa-bullhorn"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="list-unstyled item-list" aria-label="ประกาศล่าสุด">
+                            <li class="item">
+                                <span><i class="far fa-calendar-times text-danger" aria-hidden="true"></i> ซ่อมลิฟต์โซน A: 28/02/25 (10:00-12:00)</span>
+                                <button type="button" class="btn btn-sm btn-outline-secondary placeholder-action" data-action="read_announcement_lift">
+                                     <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                     <span class="btn-text">อ่าน</span>
+                                </button>
+                            </li>
+                            <li class="item">
+                               <span><i class="fas fa-glass-cheers text-success" aria-hidden="true"></i> ปาร์ตี้ชุมชนริมสระ: 05/03/25 (18:00)</span>
+                               <button type="button" class="btn btn-sm btn-outline-secondary placeholder-action" data-action="read_announcement_party">
+                                     <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                     <span class="btn-text">อ่าน</span>
+                                </button>
+                            </li>
+                             <li class="item">
+                               <span><i class="fas fa-swimmer text-info" aria-hidden="true"></i> ปิดสระว่ายน้ำทำความสะอาด: ทุกวันจันทร์</span>
+                                <button type="button" class="btn btn-sm btn-outline-secondary placeholder-action" data-action="read_announcement_pool">
+                                    <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                    <span class="btn-text">อ่าน</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                     <div class="card-footer">
+                        <button type="button" class="btn btn-secondary btn-block placeholder-action" data-action="view_all_announcements">
+                            <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                            <span class="btn-text">ดูประกาศทั้งหมด</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div> <!-- End Dashboard Grid -->
+        </section>
+
+        <!-- BILLS TAB -->
+        <section id="bills-panel" class="tab-content" role="tabpanel" aria-labelledby="bills-tab">
+            <h2>บิลค่าใช้จ่ายทั้งหมด</h2>
+             <p class="text-muted">ดูประวัติการชำระเงินและบิลย้อนหลัง สามารถคลิกที่หัวตารางเพื่อเรียงลำดับ</p>
+            <div class="card mt-4">
+                  <div class="card-content">
+                      <div style="overflow-x: auto;">
+                         <table id="bills-table" aria-label="ตารางบิลค่าใช้จ่าย">
+                            <thead>
+                                <tr>
+                                    <th scope="col" aria-sort="descending" data-sort-key="month">
+                                        เดือน <i class="fas fa-sort sort-icon" aria-hidden="true"></i>
+                                    </th>
+                                    <th scope="col" aria-sort="none" data-sort-key="amount">
+                                        ยอดรวม <i class="fas fa-sort sort-icon" aria-hidden="true"></i>
+                                    </th>
+                                    <th scope="col">สถานะ</th>
+                                    <th scope="col" style="text-align: right;">ดำเนินการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="item" data-month="2025-02" data-amount="9677">
+                                    <td scope="row" style="padding: 12px 8px;">กุมภาพันธ์ 2025</td>
+                                    <td style="padding: 12px 8px;">฿9,677</td>
+                                    <td style="padding: 12px 8px;"><span class="status status-overdue">เกินกำหนด</span></td>
+                                    <td style="padding: 12px 8px; text-align: right;">
+                                        <button type="button" class="btn btn-sm btn-danger me-1 placeholder-action" data-action="pay_bill_feb25">
+                                            <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                            <span class="btn-text">ชำระ</span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary placeholder-action" data-action="view_bill_feb25">
+                                             <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                             <span class="btn-text">ดู</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                 <tr class="item" data-month="2025-01" data-amount="9520">
+                                    <td scope="row" style="padding: 12px 8px;">มกราคม 2025</td>
+                                    <td style="padding: 12px 8px;">฿9,520</td>
+                                    <td style="padding: 12px 8px;"><span class="status status-paid">ชำระแล้ว</span></td>
+                                    <td style="padding: 12px 8px; text-align: right;">
+                                         <button type="button" class="btn btn-sm btn-outline-secondary placeholder-action" data-action="view_bill_jan25">
+                                             <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                             <span class="btn-text">ดู</span>
+                                         </button>
+                                    </td>
+                                </tr>
+                                <tr class="item" data-month="2024-12" data-amount="9480">
+                                    <td scope="row" style="padding: 12px 8px;">ธันวาคม 2024</td>
+                                    <td style="padding: 12px 8px;">฿9,480</td>
+                                    <td style="padding: 12px 8px;"><span class="status status-paid">ชำระแล้ว</span></td>
+                                    <td style="padding: 12px 8px; text-align: right;">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary placeholder-action" data-action="view_bill_dec24">
+                                             <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                                             <span class="btn-text">ดู</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- PARKING TAB -->
+        <section id="parking-panel" class="tab-content" role="tabpanel" aria-labelledby="parking-tab">
+             <h2>จัดการที่จอดรถ</h2>
+             <p class="text-muted">จองที่จอดรถสำหรับผู้มาเยี่ยม หรือดูสถานะที่จอดของคุณ</p>
+             <div class="card mt-4">
+                <div class="card-header">
+                     <h3 class="card-title">จองที่จอดรถผู้มาเยี่ยม</h3>
+                     <div class="card-icon parking" aria-hidden="true"><i class="fas fa-calendar-plus"></i></div>
+                 </div>
+                 <div class="card-content">
+                    <div class="empty-state">
+                        <i class="fas fa-car" aria-hidden="true"></i>
+                        <p>ระบบจองที่จอดรถสำหรับผู้มาเยี่ยม<br>ยังไม่เปิดให้บริการในขณะนี้</p>
+                        <button type="button" class="btn btn-primary placeholder-action" data-action="request_parking_feature">
+                             <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                             <span class="btn-text">แจ้งเตือนฉันเมื่อพร้อมใช้งาน</span>
+                        </button>
+                    </div>
+                 </div>
+             </div>
+        </section>
+
+        <!-- DELIVERY TAB -->
+        <section id="delivery-panel" class="tab-content" role="tabpanel" aria-labelledby="delivery-tab">
+             <h2>ประวัติพัสดุ</h2>
+             <p class="text-muted">รายการพัสดุทั้งหมดที่เคยส่งถึงคุณ</p>
+              <div class="card mt-4">
+                  <div class="card-content">
+                      <div class="empty-state">
+                          <i class="fas fa-history" aria-hidden="true"></i>
+                          <p>ยังไม่มีประวัติพัสดุที่บันทึกไว้</p>
+                          <button type="button" class="btn btn-secondary placeholder-action" data-action="refresh_delivery_history">
+                               <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                               <span class="btn-text"><i class="fas fa-sync-alt me-1"></i> รีเฟรช</span>
+                          </button>
+                      </div>
+                      <!-- Placeholder for future table -->
+                      <!-- <table class="mt-4"> ... </table> -->
+                  </div>
+              </div>
+        </section>
+
+        <!-- COMMUNITY TAB -->
+        <section id="community-panel" class="tab-content" role="tabpanel" aria-labelledby="community-tab">
+             <h2>ชุมชนและกิจกรรม</h2>
+             <p class="text-muted">ดูกิจกรรมที่กำลังจะมาถึง หรือเข้าร่วมกลุ่มสนทนา</p>
+             <div class="card mt-4">
+                  <div class="card-header">
+                     <h3 class="card-title">กิจกรรมเร็วๆ นี้</h3>
+                     <div class="card-icon facility" aria-hidden="true"><i class="fas fa-users"></i></div>
+                  </div>
+                 <div class="card-content">
+                     <div class="empty-state">
+                         <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                         <p>ยังไม่มีกิจกรรมชุมชนที่กำหนดไว้เร็วๆ นี้ ลองตรวจสอบประกาศดูนะ!</p>
+                         <button type="button" class="btn btn-info placeholder-action" data-action="view_past_events">
+                              <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                              <span class="btn-text">ดูกิจกรรมที่ผ่านมา</span>
+                         </button>
+                     </div>
+                     <!-- Future list of events could go here -->
+                 </div>
+             </div>
+              <!-- Link back to dashboard chat or embed a separate community chat here -->
+        </section>
+
+        <!-- TRANSPORT TAB -->
+        <section id="transport-panel" class="tab-content" role="tabpanel" aria-labelledby="transport-tab">
+             <h2>ตารางรถรับส่งทั้งหมด</h2>
+             <p class="text-muted">ตารางเวลาเดินรถรับส่งไปมหาวิทยาลัย</p>
+             <div class="card mt-4">
+                  <div class="card-header">
+                     <h3 class="card-title">ตารางเวลาประจำ</h3>
+                     <div class="card-icon transport" aria-hidden="true"><i class="fas fa-calendar-alt"></i></div>
+                  </div>
+                 <div class="card-content">
+                     <div class="empty-state">
+                         <i class="fas fa-bus-slash" aria-hidden="true"></i>
+                         <p>ไม่พบข้อมูลตารางรถรับส่งในขณะนี้ กรุณาติดต่อสอบถามนิติบุคคล</p>
+                         <button type="button" class="btn btn-outline-secondary placeholder-action" data-action="contact_juristic_transport">
+                              <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                              <span class="btn-text">ติดต่อสอบถาม</span>
+                         </button>
+                     </div>
+                     <!-- Future detailed schedule table could go here -->
+                 </div>
+             </div>
+        </section>
+
+        <!-- SERVICES TAB -->
+        <section id="services-panel" class="tab-content" role="tabpanel" aria-labelledby="services-tab">
+             <h2>บริการเสริมอื่นๆ</h2>
+             <p class="text-muted">สำรวจบริการเสริมอื่นๆ ที่มีให้บริการ</p>
+              <div class="card mt-4">
+                 <div class="card-header">
+                     <h3 class="card-title">บริการเพิ่มเติม</h3>
+                     <div class="card-icon concierge" aria-hidden="true"><i class="fas fa-concierge-bell"></i></div>
+                 </div>
+                 <div class="card-content">
+                     <div class="empty-state">
+                         <i class="fas fa-toolbox" aria-hidden="true"></i>
+                         <p>ยังไม่มีบริการเสริมอื่นๆ เพิ่มเติมในขณะนี้ หากมีข้อเสนอแนะ โปรดแจ้งให้เราทราบ!</p>
+                         <button type="button" class="btn btn-success placeholder-action" data-action="suggest_new_service">
+                              <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                              <span class="btn-text"><i class="fas fa-lightbulb me-1"></i> เสนอแนะบริการ</span>
+                         </button>
+                     </div>
+                      <!-- List other potential services here -->
+                 </div>
+              </div>
+        </section>
+
+        <!-- MAINTENANCE TAB -->
+        <section id="maintenance-panel" class="tab-content" role="tabpanel" aria-labelledby="maintenance-tab">
+            <h2>แจ้งซ่อม / ติดตามงาน</h2>
+             <p class="text-muted">กรอกแบบฟอร์มเพื่อแจ้งซ่อม หรือดูประวัติการแจ้งซ่อมของคุณ</p>
+             <div class="card mt-4">
+                 <div class="card-header">
+                    <h3 class="card-title">แจ้งซ่อมรายการใหม่</h3>
+                     <div class="card-icon maintenance" aria-hidden="true"><i class="fas fa-wrench"></i></div>
+                 </div>
+                 <div class="card-content">
+                     <form id="maintenance-form" novalidate>
+                         <div class="form-group">
+                            <label for="maintenanceType" class="form-label">ประเภทปัญหา:</label>
+                            <select id="maintenanceType" class="form-select" required aria-describedby="maintenanceTypeFeedback">
+                                <option value="" disabled selected>เลือกประเภท...</option>
+                                <option value="electrical">ไฟฟ้า (ไฟดับ, ปลั๊กเสีย)</option>
+                                <option value="plumbing">ประปา (น้ำรั่ว, ท่อตัน)</option>
+                                <option value="ac">เครื่องปรับอากาศ</option>
+                                <option value="appliance">เครื่องใช้ไฟฟ้า (ตู้เย็น, ไมโครเวฟ)</option>
+                                <option value="furniture">เฟอร์นิเจอร์</option>
+                                <option value="other">อื่นๆ</option>
+                            </select>
+                            <span id="maintenanceTypeFeedback" class="form-feedback"></span>
+                         </div>
+                         <div class="form-group">
+                             <label for="maintenanceDescription" class="form-label">รายละเอียดปัญหา:</label>
+                             <textarea id="maintenanceDescription" class="form-textarea" rows="4" placeholder="กรุณาอธิบายปัญหาโดยละเอียด..." required minlength="15" aria-describedby="maintenanceDescriptionFeedback"></textarea>
+                             <span id="maintenanceDescriptionFeedback" class="form-feedback"></span>
+                         </div>
+                         <div class="form-group">
+                            <label for="maintenanceUrgency" class="form-label">ระดับความเร่งด่วน:</label>
+                            <select id="maintenanceUrgency" class="form-select">
+                                <option value="low">ไม่ด่วน</option>
+                                <option value="medium" selected>ปานกลาง</option>
+                                <option value="high">ด่วน</option>
+                            </select>
+                         </div>
+                          <div class="form-group">
+                            <label for="maintenancePhoto" class="form-label">แนบรูปภาพ (ถ้ามี):</label>
+                            <input type="file" id="maintenancePhoto" class="form-input" accept="image/*" aria-describedby="maintenancePhotoHelp">
+                            <small id="maintenancePhotoHelp" class="text-muted">ขนาดไฟล์สูงสุด 5MB (จำลอง)</small>
+                         </div>
+                         <button type="submit" class="btn btn-warning btn-block mt-4">
+                             <i class="fas fa-spinner fa-spin spinner" aria-hidden="true"></i>
+                             <span class="btn-text"><i class="fas fa-wrench me-2" aria-hidden="true"></i> ส่งเรื่องแจ้งซ่อม</span>
+                         </button>
+                         <div id="maintenance-feedback" class="form-feedback mt-3" aria-live="polite"></div> <!-- Feedback Area -->
+                     </form>
+                     <h4 class="mt-5">ประวัติการแจ้งซ่อมล่าสุด</h4>
+                     <ul class="item-list" aria-label="ประวัติการแจ้งซ่อม">
+                         <li class="item">
+                             <span><i class="fas fa-lightbulb text-warning" aria-hidden="true"></i> ไฟห้องน้ำเสีย - 15/02/25</span>
+                             <span class="status status-pending">รอดำเนินการ</span>
+                         </li>
+                         <li class="item">
+                            <span><i class="fas fa-faucet text-info" aria-hidden="true"></i> ก๊อกน้ำรั่ว - 10/02/25</span>
+                            <span class="status status-paid"><i class="fas fa-check" aria-hidden="true"></i> เสร็จสิ้น</span>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>CondoConnect Thailand</h3>
+                <p>แพลตฟอร์มจัดการชีวิตคอนโดครบวงจรสำหรับนักศึกษาและผู้อยู่อาศัย ทำให้ทุกอย่างง่ายขึ้น สะดวกขึ้น</p>
+            </div>
+            <div class="footer-section">
+                <h3>ลิงก์ด่วน</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#dashboard" class="trigger-tab" data-target-tab="dashboard">หน้าหลัก</a></li>
+                    <li><a href="#" class="placeholder-action" data-action="view_about_us">เกี่ยวกับเรา</a></li>
+                    <li><a href="#services" class="trigger-tab" data-target-tab="services">บริการต่างๆ</a></li>
+                    <li><a href="#" class="placeholder-action" data-action="view_faq">คำถามที่พบบ่อย (FAQ)</a></li>
+                    <li><a href="#" class="placeholder-action" data-action="view_privacy_policy">นโยบายความเป็นส่วนตัว</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ติดต่อเรา</h3>
+                 <address style="font-style: normal;">
+                    <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> อาคาร ABC, กรุงเทพฯ 10110</p>
+                    <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> <a href="mailto:support@condoconnect.co.th" style="color: inherit;">support@condoconnect.co.th</a></p>
+                    <p><i class="fas fa-phone me-2" aria-hidden="true"></i> <a href="tel:021234567" style="color: inherit;">02-123-4567</a></p>
+                 </address>
+                 <div class="social-links mt-3">
+                     <a href="#" class="placeholder-action" aria-label="Facebook" data-action="social_facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                     <a href="#" class="placeholder-action" aria-label="Line" data-action="social_line"><i class="fab fa-line" aria-hidden="true"></i></a>
+                     <a href="#" class="placeholder-action" aria-label="Instagram" data-action="social_instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                 </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> CondoConnect Thailand. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    // --- START JAVASCRIPT ---
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- Global Variables & Selectors ---
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const tabContainer = document.querySelector('.tabs');
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav#main-navigation');
+        const themeToggleButton = document.getElementById('theme-toggle-button');
+        const placeholderActionElements = document.querySelectorAll('.placeholder-action');
+        const tabTriggerLinks = document.querySelectorAll('.trigger-tab');
+        const currentYearSpan = document.getElementById('current-year');
+
+        // --- Helper Functions ---
+
+        /**
+         * Sets loading state on a button.
+         * @param {HTMLButtonElement|HTMLAnchorElement} buttonElement - The button to modify.
+         * @param {boolean} isLoading - True to show loading, false to hide.
+         * @param {string} [originalContent=null] - Optional: Original button HTML content (icon + text). If not provided, it tries to find '.btn-text'.
+         */
+        const setButtonLoading = (buttonElement, isLoading, originalContent = null) => {
+            if (!buttonElement) return;
+            const spinner = buttonElement.querySelector('.spinner');
+            const btnTextElement = buttonElement.querySelector('.btn-text');
+
+            if (isLoading) {
+                // Store original content if not already stored or provided
+                if (!buttonElement.dataset.originalContent && !originalContent) {
+                     buttonElement.dataset.originalContent = btnTextElement ? btnTextElement.innerHTML : buttonElement.innerHTML;
+                 } else if (originalContent) {
+                     buttonElement.dataset.originalContent = originalContent;
+                 }
+
+                buttonElement.classList.add('is-loading');
+                buttonElement.disabled = true;
+                 if (spinner) spinner.style.display = 'inline-block';
+                 if (btnTextElement) btnTextElement.style.opacity = '0'; // Hide text
+
+            } else {
+                buttonElement.classList.remove('is-loading');
+                buttonElement.disabled = false;
+                if (spinner) spinner.style.display = 'none';
+                // Restore original content
+                if (btnTextElement && buttonElement.dataset.originalContent) {
+                     btnTextElement.innerHTML = buttonElement.dataset.originalContent;
+                     btnTextElement.style.opacity = '1';
+                 } else if (buttonElement.dataset.originalContent) {
+                     // Fallback if no .btn-text element was found initially
+                     buttonElement.innerHTML = buttonElement.dataset.originalContent;
+                 }
+                 // Clean up data attribute
+                 // delete buttonElement.dataset.originalContent; // Keep it for potential re-use? Maybe not.
+            }
+        };
+
+        /**
+         * Shows feedback message for a form or action.
+         * @param {HTMLElement} feedbackElement - The element to display the message in.
+         * @param {string} message - The message text.
+         * @param {('success'|'error'|'info')} type - Type of feedback for styling.
+         * @param {number} [clearAfterMs=0] - Milliseconds after which to clear the feedback (0 = don't clear).
+         */
+        const showFeedback = (feedbackElement, message, type = 'info', clearAfterMs = 0) => {
+            if (!feedbackElement) return;
+            feedbackElement.textContent = message;
+            feedbackElement.className = 'form-feedback mt-3'; // Reset classes
+            if (type === 'success') {
+                feedbackElement.classList.add('is-success');
+                feedbackElement.setAttribute('aria-live', 'assertive'); // Assertive for success/error
+            } else if (type === 'error') {
+                feedbackElement.classList.add('is-error');
+                feedbackElement.setAttribute('aria-live', 'assertive');
+            } else {
+                 feedbackElement.classList.add('is-info'); // Optional info style if needed
+                 feedbackElement.setAttribute('aria-live', 'polite');
+            }
+
+            if (clearAfterMs > 0) {
+                setTimeout(() => {
+                    feedbackElement.textContent = '';
+                    feedbackElement.className = 'form-feedback mt-3'; // Clear styles too
+                     feedbackElement.removeAttribute('aria-live');
+                }, clearAfterMs);
+            }
+        };
+
+         /**
+         * Validates a form input element based on HTML5 attributes.
+         * @param {HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement} inputElement - The form element to validate.
+         * @returns {boolean} - True if valid, false otherwise. Also updates feedback area.
+         */
+        const validateInput = (inputElement) => {
+            const feedbackId = inputElement.getAttribute('aria-describedby');
+            const feedbackElement = feedbackId ? document.getElementById(feedbackId) : null;
+            let isValid = true;
+            let message = '';
+
+            // Reset validation state
+             inputElement.setAttribute('aria-invalid', 'false');
+             if (feedbackElement) showFeedback(feedbackElement, '', 'info'); // Clear previous feedback
+
+            // Check validity
+            if (!inputElement.checkValidity()) {
+                 isValid = false;
+                 inputElement.setAttribute('aria-invalid', 'true');
+
+                 if (inputElement.validity.valueMissing) {
+                    message = 'กรุณากรอกข้อมูลในช่องนี้';
+                 } else if (inputElement.validity.typeMismatch) {
+                     message = 'กรุณากรอกข้อมูลในรูปแบบที่ถูกต้อง';
+                 } else if (inputElement.validity.rangeUnderflow || inputElement.validity.rangeOverflow) {
+                     const min = inputElement.getAttribute('min');
+                     const max = inputElement.getAttribute('max');
+                     if (min && max) message = `กรุณากรอกค่าระหว่าง ${min} และ ${max}`;
+                     else if (min) message = `กรุณากรอกค่าที่มากกว่าหรือเท่ากับ ${min}`;
+                     else if (max) message = `กรุณากรอกค่าที่น้อยกว่าหรือเท่ากับ ${max}`;
+                     else message = 'กรุณากรอกค่าที่อยู่ในช่วงที่กำหนด';
+                 } else if (inputElement.validity.tooShort) {
+                     message = `กรุณากรอกอย่างน้อย ${inputElement.getAttribute('minlength')} ตัวอักษร`;
+                 } else if (inputElement.validity.tooLong) {
+                     message = `กรุณากรอกไม่เกิน ${inputElement.getAttribute('maxlength')} ตัวอักษร`;
+                 } else {
+                     message = 'ข้อมูลไม่ถูกต้อง'; // Generic fallback
+                 }
+            }
+
+            if (feedbackElement) {
+                 showFeedback(feedbackElement, message, isValid ? 'success' : 'error');
+            }
+
+            return isValid;
+        };
+
+
+        // --- Core Functionality ---
+
+        /**
+         * Activate a specific tab
+         */
+        const activateTab = (tabToActivate, options = { focus: true, scroll: false }) => {
+            if (!tabToActivate) return;
+
+            tabs.forEach(t => {
+                const isSelected = t === tabToActivate;
+                t.classList.toggle('active', isSelected);
+                t.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+                t.setAttribute('tabindex', isSelected ? '0' : '-1');
+            });
+
+            tabContents.forEach(c => {
+                const panelId = tabToActivate.getAttribute('aria-controls');
+                const isActive = c.id === panelId;
+                c.classList.toggle('active', isActive);
+                if (isActive && options.scroll) {
+                    c.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            if (options.focus && tabToActivate.classList.contains('active')) {
+                tabToActivate.focus();
+            }
+
+            // Update active state for corresponding nav links
+             const targetTabId = tabToActivate.dataset.tab;
+             const navLinks = document.querySelectorAll('#main-navigation a[data-target]');
+             navLinks.forEach(link => {
+                 link.classList.toggle('active', link.dataset.target === targetTabId);
+             });
+        };
+
+        /**
+         * Tab Switching Logic (Click & Keyboard)
+         */
+        if (tabContainer && tabs.length > 0 && tabContents.length > 0) {
+            tabContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('tab') && !e.target.classList.contains('active')) {
+                    activateTab(e.target);
+                }
+            });
+
+            tabContainer.addEventListener('keydown', (e) => {
+                if (!e.target.classList.contains('tab')) return;
+
+                let currentIndex = Array.from(tabs).indexOf(e.target);
+                let nextIndex = -1;
+                let activate = false;
+
+                switch (e.key) {
+                    case 'ArrowRight': case 'ArrowDown':
+                        e.preventDefault(); nextIndex = (currentIndex + 1) % tabs.length; activate = true; break;
+                    case 'ArrowLeft': case 'ArrowUp':
+                        e.preventDefault(); nextIndex = (currentIndex - 1 + tabs.length) % tabs.length; activate = true; break;
+                    case 'Home': e.preventDefault(); nextIndex = 0; activate = true; break;
+                    case 'End': e.preventDefault(); nextIndex = tabs.length - 1; activate = true; break;
+                    case 'Enter': case ' ': e.preventDefault(); break; // Click handler manages activation
+                }
+
+                if (activate && nextIndex !== -1) {
+                    activateTab(tabs[nextIndex]);
+                }
+            });
+        }
+
+        /**
+         * Hamburger Menu Toggle & Accessibility
+         */
+        if (hamburger && nav) {
+            const navLinks = nav.querySelectorAll('a[role="menuitem"]');
+
+            const toggleNav = (show) => {
+                const isActive = typeof show === 'boolean' ? show : !nav.classList.contains('active');
+                nav.classList.toggle('active', isActive);
+                hamburger.setAttribute('aria-expanded', String(isActive));
+                const icon = hamburger.querySelector('i');
+                icon.classList.toggle('fa-bars', !isActive);
+                icon.classList.toggle('fa-times', isActive);
+
+                if (isActive && navLinks.length > 0) {
+                    navLinks[0].focus();
+                } else if (!isActive && document.activeElement !== hamburger) {
+                     hamburger.focus();
+                }
+            };
+
+            hamburger.addEventListener('click', () => toggleNav());
+
+             // Close menu if clicking outside or on link
+            document.addEventListener('click', (event) => {
+                if (nav.classList.contains('active') && !nav.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleNav(false);
+                }
+            });
+             navLinks.forEach(link => link.addEventListener('click', () => toggleNav(false)));
+
+            // Close menu on Escape key
+             document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && nav.classList.contains('active')) {
+                    toggleNav(false);
+                }
+             });
+
+             // Trap focus within mobile nav
+             nav.addEventListener('keydown', (e) => {
+                 if (nav.classList.contains('active') && e.key === 'Tab' && navLinks.length > 0) {
+                     const firstElement = navLinks[0];
+                     const lastElement = navLinks[navLinks.length - 1];
+                     if (e.shiftKey && document.activeElement === firstElement) { e.preventDefault(); lastElement.focus(); }
+                     else if (!e.shiftKey && document.activeElement === lastElement) { e.preventDefault(); firstElement.focus(); }
+                 }
+             });
+        }
+
+
+        /**
+         * Dark Mode Toggle
+         */
+        if (themeToggleButton) {
+            const sunIcon = 'fa-sun';
+            const moonIcon = 'fa-moon';
+
+            const applyTheme = (theme) => {
+                const icon = themeToggleButton.querySelector('i');
+                const hiddenSpan = themeToggleButton.querySelector('.visually-hidden');
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    icon?.classList.remove(moonIcon); icon?.classList.add(sunIcon);
+                    themeToggleButton.setAttribute('aria-label', 'สลับไปโหมดสว่าง');
+                    if (hiddenSpan) hiddenSpan.textContent = 'สลับธีมไปโหมดสว่าง';
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    icon?.classList.remove(sunIcon); icon?.classList.add(moonIcon);
+                    themeToggleButton.setAttribute('aria-label', 'สลับไปโหมดมืด');
+                     if (hiddenSpan) hiddenSpan.textContent = 'สลับธีมไปโหมดมืด';
+                }
+            };
+
+            const storedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+            applyTheme(initialTheme);
+
+            themeToggleButton.addEventListener('click', () => {
+                const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
+
+        /**
+         * Dynamic Total Calculation for Cleaning Service Card
+         */
+         const cleaningCard = document.getElementById('cleaning-service-card');
+         if (cleaningCard) {
+             const checkboxes = cleaningCard.querySelectorAll('.service-item input[type="checkbox"][data-price]');
+             const quantityControlsList = cleaningCard.querySelectorAll('.quantity-controls[data-price]');
+             const totalAmountElement = cleaningCard.querySelector('.total-amount');
+             const basePriceElement = cleaningCard.querySelector('.service-item:not(:has(input)):not(:has(.quantity-controls)) .price-tag');
+             const basePrice = basePriceElement ? parseInt(basePriceElement.textContent.replace(/[^0-9]/g, ''), 10) : 0;
+             const confirmButton = cleaningCard.querySelector('#confirm-cleaning-btn');
+             const feedbackArea = cleaningCard.querySelector('#cleaning-feedback');
+
+             const updateTotal = () => {
+                 try {
+                     let currentTotal = basePrice;
+                     checkboxes.forEach(cb => { if (cb.checked) currentTotal += parseInt(cb.dataset.price, 10) || 0; });
+                     quantityControlsList.forEach(qc => {
+                         const quantity = parseInt(qc.querySelector('.quantity-value')?.textContent || '0', 10);
+                         const pricePerItem = parseInt(qc.dataset.price, 10) || 0;
+                         if (quantity > 0) currentTotal += quantity * pricePerItem;
+                     });
+
+                     if (totalAmountElement) totalAmountElement.textContent = `฿ ${currentTotal.toLocaleString()}`;
+
+                 } catch (error) {
+                      console.error("Error calculating cleaning total:", error);
+                      if (totalAmountElement) totalAmountElement.textContent = 'Error';
+                 }
+             };
+
+             checkboxes.forEach(cb => cb.addEventListener('change', updateTotal));
+             quantityControlsList.forEach(controls => {
+                 const quantitySpan = controls.querySelector('.quantity-value');
+                 const decreaseBtn = controls.querySelector('.quantity-decrease');
+                 const increaseBtn = controls.querySelector('.quantity-increase');
+
+                 const updateQuantity = (change) => {
+                     if (!quantitySpan) return;
+                     let quantity = Math.max(0, parseInt(quantitySpan.textContent, 10) + change);
+                     quantitySpan.textContent = quantity;
+                     updateTotal();
+                 };
+                 decreaseBtn?.addEventListener('click', () => updateQuantity(-1));
+                 increaseBtn?.addEventListener('click', () => updateQuantity(1));
+                 [decreaseBtn, increaseBtn].forEach(btn => {
+                     btn?.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); } });
+                 });
+             });
+
+             updateTotal(); // Initial calculation
+
+             // Confirm Button Handler
+             if (confirmButton && feedbackArea) {
+                 confirmButton.addEventListener('click', () => {
+                     setButtonLoading(confirmButton, true);
+                     showFeedback(feedbackArea, '', 'info'); // Clear previous
+                     const total = totalAmountElement ? totalAmountElement.textContent : 'N/A';
+                     console.log(`Simulating Cleaning Service Confirmation: Total ${total}`);
+
+                     setTimeout(() => {
+                         setButtonLoading(confirmButton, false);
+                         showFeedback(feedbackArea, `ส่งคำขอบริการทำความสะอาด ยอดรวม ${total} เรียบร้อยแล้ว`, 'success', 5000);
+                         // In real app, you might disable button or reset form here
+                         confirmButton.disabled = true; // Keep disabled after success for demo
+                     }, 1500);
+                 });
+             }
+         }
+
+
+        /**
+         * Generic Form Submission Handling & Validation
+         */
+        const validatedForms = document.querySelectorAll('form[novalidate]');
+        validatedForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent default only if validation fails or for simulation
+
+                let isFormValid = true;
+                const inputsToValidate = form.querySelectorAll('input[required], select[required], textarea[required]');
+
+                inputsToValidate.forEach(input => {
+                    if (!validateInput(input)) {
+                        isFormValid = false;
+                    }
+                });
+
+                if (!isFormValid) {
+                    const firstInvalidInput = form.querySelector('[aria-invalid="true"]');
+                    firstInvalidInput?.focus(); // Focus first error
+                    return; // Stop submission if validation fails
+                }
+
+                // --- Form is valid, proceed with submission simulation ---
+                const submitButton = form.querySelector('button[type="submit"]');
+                const feedbackAreaId = form.id.replace('-form', '-feedback');
+                const feedbackArea = form.querySelector(`#${feedbackAreaId}`);
+
+                if (submitButton) setButtonLoading(submitButton, true);
+                if (feedbackArea) showFeedback(feedbackArea, '', 'info'); // Clear previous
+
+                console.log(`Simulating Form ${form.id} Submission. Data:`, new FormData(form));
+
+                // Simulate network request
+                setTimeout(() => {
+                    if (submitButton) setButtonLoading(submitButton, false);
+
+                    let successMessage = 'ส่งข้อมูลเรียบร้อยแล้ว!';
+                    // Special handling for chat form
+                    if (form.id === 'chat-form') {
+                        const chatInput = form.querySelector('#chatMessageInput');
+                        const chatContainer = document.querySelector('.chat-container');
+                        if (chatInput?.value && chatContainer) {
+                            const now = new Date();
+                            const timeString = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' });
+                            const newMessage = document.createElement('div');
+                            newMessage.className = 'chat-message chat-outgoing';
+                            newMessage.innerHTML = `<strong>คุณ (ห้อง 205):</strong> ${escapeHTML(chatInput.value)} <span class="timestamp">${timeString}</span>`;
+                            chatContainer.appendChild(newMessage);
+                            chatContainer.scrollTop = chatContainer.scrollHeight;
+                            chatInput.value = ''; // Clear input
+                            successMessage = 'ส่งข้อความแล้ว';
+                             if (feedbackArea) showFeedback(feedbackArea, successMessage, 'success'); // Use visually hidden feedback for chat
+                        }
+                    } else if (feedbackArea) {
+                         showFeedback(feedbackArea, successMessage, 'success', 5000);
+                         form.reset(); // Reset other forms on success
+                         // Clear validation states after reset
+                         inputsToValidate.forEach(input => {
+                              input.setAttribute('aria-invalid', 'false');
+                              const fbId = input.getAttribute('aria-describedby');
+                              const fbEl = fbId ? document.getElementById(fbId) : null;
+                              if (fbEl) fbEl.textContent = '';
+                         });
+                    }
+
+                    // Keep button disabled for demo after success on some forms if desired
+                    if (form.id !== 'chat-form' && submitButton) {
+                       // submitButton.disabled = true;
+                    }
+
+                }, 1500);
+            });
+
+             // Add blur validation
+             const inputsToValidateOnBlur = form.querySelectorAll('input[required], textarea[required]');
+             inputsToValidateOnBlur.forEach(input => {
+                 input.addEventListener('blur', () => validateInput(input));
+             });
+        });
+
+
+        /**
+         * Links/Buttons that Trigger Tab Switching
+         */
+        tabTriggerLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetTabId = link.dataset.targetTab;
+                if (targetTabId) {
+                    const targetTabButton = document.getElementById(`${targetTabId}-tab`);
+                    if (targetTabButton) {
+                        activateTab(targetTabButton, { focus: false, scroll: true });
+                        setTimeout(() => {
+                             const targetPanel = document.getElementById(`${targetTabId}-panel`);
+                             targetPanel?.querySelector('h2, button:not([disabled]), input, select, textarea, a')?.focus({ preventScroll: true });
+                        }, 350);
+                    } else { console.warn(`Target tab button not found: ${targetTabId}-tab`); }
+                } else { console.warn("Trigger link missing data-target-tab:", link); }
+            });
+        });
+
+
+        /**
+         * Parking Spot Interaction Simulation
+         */
+         const parkingLot = document.querySelector('.parking-lot');
+         const parkingFeedback = document.getElementById('parking-selection-feedback');
+         let selectedSpot = null;
+
+         if (parkingLot) {
+             parkingLot.addEventListener('click', (e) => {
+                 const spot = e.target.closest('.parking-spot');
+                 if (!spot || spot.classList.contains('occupied') || spot.classList.contains('ev-charging')) {
+                     return; // Ignore clicks on non-buttons or occupied/ev spots
+                 }
+
+                 // Deselect previous spot if any
+                 if (selectedSpot && selectedSpot !== spot) {
+                     selectedSpot.classList.remove('selected');
+                     selectedSpot.setAttribute('aria-pressed', 'false');
+                 }
+
+                 // Toggle selection on the current spot
+                 if (spot.classList.contains('selected')) {
+                     spot.classList.remove('selected');
+                     spot.setAttribute('aria-pressed', 'false');
+                     selectedSpot = null;
+                      if (parkingFeedback) parkingFeedback.textContent = '';
+                 } else {
+                     spot.classList.add('selected');
+                     spot.setAttribute('aria-pressed', 'true');
+                     selectedSpot = spot;
+                     if (parkingFeedback) parkingFeedback.textContent = `คุณเลือกที่จอด ${spot.textContent.trim()}`;
+                 }
+                 console.log(`Parking Spot Clicked: ${spot.textContent.trim()}, Selected: ${spot.classList.contains('selected')}`);
+             });
+         }
+
+
+        /**
+         * Placeholder Actions Simulation
+         */
+        placeholderActionElements.forEach(el => {
+            const action = el.dataset.action || 'unknown_action';
+            const isButton = el.tagName === 'BUTTON';
+            const originalContent = el.innerHTML; // Store original content
+
+            const handleClick = (e) => {
+                if (el.tagName === 'A' && el.getAttribute('href') === '#') e.preventDefault();
+
+                const buttonText = el.textContent.trim() || el.getAttribute('aria-label') || 'Element';
+                console.log(`Placeholder Action Triggered: "${action}" from: "${buttonText}"`);
+                setButtonLoading(el, true, originalContent); // Pass original content
+
+                // Simulate action delay
+                setTimeout(() => {
+                    setButtonLoading(el, false);
+
+                    // --- Specific Action Simulations ---
+                    let alertMessage = `[จำลอง] ดำเนินการ '${action.replace(/_/g, ' ')}' สำเร็จ`;
+                    let shouldDisable = false;
+
+                    if (action.startsWith('pay_bill_') || action === 'pay_urgent_bill') {
+                        const row = el.closest('tr, .card'); // Find parent row or card
+                        if (row) {
+                            const statusElement = row.querySelector('.status-overdue, .status-pending');
+                            if (statusElement) {
+                                statusElement.classList.remove('status-overdue', 'status-pending');
+                                statusElement.classList.add('status-paid');
+                                statusElement.innerHTML = '<i class="fas fa-check"></i> ชำระแล้ว';
+                                alertMessage = `[จำลอง] ชำระบิล ${action.split('_').pop()} เรียบร้อยแล้ว`;
+                                shouldDisable = true; // Disable after payment
+                                const viewButton = row.querySelector('[data-action^="view_bill_"]');
+                                viewButton?.focus();
+                            } else {
+                                alertMessage = `[จำลอง] บิลนี้อาจชำระไปแล้ว`;
+                            }
+                        }
+                    } else if (action.startsWith('view_bill_')) {
+                        alertMessage = `[จำลอง] กำลังแสดงรายละเอียดบิล ${action.split('_').pop()}... (ปกติจะเปิด Modal)`;
+                    } else if (action.startsWith('book_transport_')) {
+                         alertMessage = `[จำลอง] จองที่นั่งรอบ ${action.split('_').pop()} เรียบร้อยแล้ว`;
+                         shouldDisable = true; // Disable after booking for demo
+                    } else if (action.startsWith('read_announcement_')) {
+                        alertMessage = `[จำลอง] กำลังแสดงรายละเอียดประกาศ '${action.split('_').pop()}'... (ปกติจะเปิด Modal)`;
+                    } else if (action === 'view_all_announcements') {
+                        alertMessage = `[จำลอง] กำลังแสดงประกาศทั้งหมด... (ปกติจะไปหน้าใหม่หรือเปิด Modal)`;
+                    } else if (action === 'request_parking_feature' || action === 'suggest_new_service') {
+                        alertMessage = `[จำลอง] ขอบคุณสำหรับความสนใจ/ข้อเสนอแนะ! เราจะแจ้งให้คุณทราบ`;
+                        shouldDisable = true;
+                    } else if (action.startsWith('social_')) {
+                         alertMessage = `[จำลอง] กำลังเปิดลิงก์ ${action.split('_').pop()}...`;
+                         // window.open('your_social_link', '_blank'); // Real action
+                    } else if (action.startsWith('view_')) { // General view actions
+                         alertMessage = `[จำลอง] กำลังแสดง '${action.split('_').slice(1).join(' ')}'...`;
+                    }
+
+                    alert(alertMessage); // Use alert for simplicity
+
+                    if (shouldDisable) {
+                        el.disabled = true;
+                        el.classList.add('disabled'); // Add visual disabled state if needed
+                        // Optionally change text: el.querySelector('.btn-text').textContent = 'ดำเนินการแล้ว';
+                    }
+
+                }, 1000); // Shorter delay for placeholders
+            };
+
+            el.addEventListener('click', handleClick);
+
+             // Add keyboard support for non-buttons acting as buttons
+             if (!isButton) {
+                 el.setAttribute('role', 'button');
+                 el.setAttribute('tabindex', '0');
+                 el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(e); } });
+             }
+        });
+
+
+        /**
+         * Basic Table Sorting (Bills Table)
+         */
+        const billsTable = document.getElementById('bills-table');
+        if (billsTable) {
+            const headers = billsTable.querySelectorAll('th[aria-sort]');
+            const tbody = billsTable.querySelector('tbody');
+
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const currentSort = header.getAttribute('aria-sort');
+                    const sortKey = header.dataset.sortKey;
+                    let newSort;
+
+                    // Reset other headers
+                    headers.forEach(h => { if (h !== header) h.setAttribute('aria-sort', 'none'); });
+
+                    // Determine new sort order
+                    if (currentSort === 'none' || currentSort === 'descending') newSort = 'ascending';
+                    else newSort = 'descending';
+
+                    header.setAttribute('aria-sort', newSort);
+
+                    // Sort table rows
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+                    rows.sort((a, b) => {
+                        let valA = a.dataset[sortKey];
+                        let valB = b.dataset[sortKey];
+
+                        // Basic numeric conversion if possible
+                        const numA = parseFloat(valA);
+                        const numB = parseFloat(valB);
+                        if (!isNaN(numA) && !isNaN(numB)) {
+                            valA = numA;
+                            valB = numB;
+                        }
+
+                        if (valA < valB) return newSort === 'ascending' ? -1 : 1;
+                        if (valA > valB) return newSort === 'ascending' ? 1 : -1;
+                        return 0;
+                    });
+
+                    // Re-append sorted rows
+                    rows.forEach(row => tbody.appendChild(row));
+                    console.log(`Sorted bills by ${sortKey} ${newSort}`);
+                });
+            });
+        }
+
+        /**
+         * Sync Nav Link Active State on Scroll (Intersection Observer)
+         */
+         const sectionsForScroll = Array.from(tabContents); // Use tab content sections
+         const navLinksForScroll = document.querySelectorAll('#main-navigation a[data-target]');
+
+         if ("IntersectionObserver" in window && sectionsForScroll.length > 0 && navLinksForScroll.length > 0) {
+             let lastIntersectingSectionId = null;
+
+             const observerOptions = {
+                 root: null,
+                 rootMargin: "-25% 0px -75% 0px", // Slightly adjusted margin
+                 threshold: 0
+             };
+
+             const observerCallback = (entries) => {
+                 let latestEntryTime = 0;
+                 let entryToUpdate = null;
+
+                 entries.forEach(entry => {
+                     if (entry.isIntersecting && entry.time > latestEntryTime) {
+                         latestEntryTime = entry.time;
+                         entryToUpdate = entry;
+                     }
+                 });
+
+                 // Only update if there's a new intersecting entry
+                 if (entryToUpdate) {
+                      const targetId = entryToUpdate.target.id.replace('-panel', '');
+                      if (targetId !== lastIntersectingSectionId) { // Avoid redundant updates
+                          lastIntersectingSectionId = targetId;
+                          // Update Nav Links
+                          navLinksForScroll.forEach(link => {
+                              link.classList.toggle('active', link.dataset.target === targetId);
+                          });
+                          // Update Tab Buttons (visual only)
+                          tabs.forEach(tab => {
+                              const isActive = tab.dataset.tab === targetId;
+                              tab.classList.toggle('active', isActive);
+                              tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                              tab.setAttribute('tabindex', isActive ? '0' : '-1');
+                          });
+                          // console.log(`Scrolled to section: ${targetId}`);
+                      }
+                 } else {
+                     // If no sections are intersecting in the target zone, potentially deactivate all
+                     // Or keep the last active one highlighted - current logic keeps last active
+                 }
+             };
+
+             const observer = new IntersectionObserver(observerCallback, observerOptions);
+             sectionsForScroll.forEach(section => observer.observe(section));
+         } else {
+             console.log("Intersection Observer not supported or elements missing for scroll sync.");
+         }
+
+        /**
+         * Utility: Escape HTML to prevent XSS in dynamic content
+         */
+        const escapeHTML = (str) => {
+            const p = document.createElement('p');
+            p.textContent = str;
+            return p.innerHTML;
+        };
+
+
+        // --- Initial Setup ---
+        if (currentYearSpan) {
+             currentYearSpan.textContent = new Date().getFullYear();
+         }
+
+        console.log("CondoConnect Initialized Successfully!");
+
+    }); // End DOMContentLoaded
+    // --- END JAVASCRIPT ---
+    </script>
+</body>
+</html>
